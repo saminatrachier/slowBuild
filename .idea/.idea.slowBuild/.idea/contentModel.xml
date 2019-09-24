@@ -8,13 +8,20 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="dnaChain.cs" t="Include" />
-          <e p="dnaChain2.cs" t="Include" />
           <e p="dnaSpawn.cs" t="Include" />
-          <e p="dnaSpawn2.cs" t="Include" />
           <e p="player1A.cs" t="Include" />
           <e p="player1C.cs" t="Include" />
           <e p="player1G.cs" t="Include" />
           <e p="player1T.cs" t="Include" />
+          <e p="Player2" t="Include">
+            <e p="dnaChain2.cs" t="Include" />
+            <e p="dnaSpawn2.cs" t="Include" />
+            <e p="player2A.cs" t="Include" />
+            <e p="player2C.cs" t="Include" />
+            <e p="player2G.cs" t="Include" />
+            <e p="player2T.cs" t="Include" />
+            <e p="ScoreText2.cs" t="Include" />
+          </e>
           <e p="ScoreText1.cs" t="Include" />
         </e>
       </e>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 //USAGE: put this on the spawning prefabs to make sure the player has the correct input
 //put this on the spawning dna and put a tag on the player's pieces
-public class player1C : MonoBehaviour
+public class player2C : MonoBehaviour
 {
     public GameObject CChain;
 
@@ -22,7 +22,7 @@ public class player1C : MonoBehaviour
         {
             
             Debug.Log("Score++");
-            ScoreText1.Score += 1;
+            ScoreText2.Score2 += 1;
 
         }
         else

@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 //usage: create a UI score counter for player 1 when they make a correct match
 
-public class ScoreText1 : MonoBehaviour
+public class ScoreText2 : MonoBehaviour
 {
     private Text text;
 
-    public static int Score;
+    public static int Score2;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,6 @@ public class ScoreText1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = (" "+Score);
+        text.text = (" "+Score2);
     }
 }
