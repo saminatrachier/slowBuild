@@ -22,12 +22,15 @@ public class dnaChain2 : MonoBehaviour
 
     
     //time left for player objects to appear
-    public float timeLeft = 0f;
+    public Image timer;
+    public float timeLeft;
+    public float maxTime = 60f;
     
     // Start is called before the first frame update
     void Start()
     {
-  
+
+        timeLeft = maxTime;
     }
 
     // Update is called once per frame
@@ -63,6 +66,16 @@ public class dnaChain2 : MonoBehaviour
             p2Progress.fillAmount += .01f;
 
 
+        }
+        
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            timer.fillAmount = timeLeft / maxTime;
+        }
+        else
+        {
+            Time.timeScale = 0;
         }
         
     
