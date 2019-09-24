@@ -4,11 +4,11 @@ using UnityEngine;
 
 //USAGE: put this on the spawning prefabs to make sure the player has the correct input
 //put this on the spawning dna and put a tag on the player's pieces
-public class player1T : MonoBehaviour
+public class player1C : MonoBehaviour
 {
-    public GameObject TChain;
+    public GameObject CChain;
 
-    public GameObject A;
+    public GameObject G;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class player1T : MonoBehaviour
 
         float myMaxDistance = 5f;
         Debug.DrawRay(myRay.origin, myRay.direction * myMaxDistance, Color.yellow);
-        if (Physics.Raycast(myRay, out hit,myMaxDistance)&& hit.transform.tag =="A")
+        if (Physics.Raycast(myRay, out hit,myMaxDistance)&& hit.transform.tag =="G")
         {
             
             Debug.Log("Score++");
