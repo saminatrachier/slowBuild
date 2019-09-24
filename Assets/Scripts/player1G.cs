@@ -28,6 +28,7 @@ public class player1G : MonoBehaviour
         else
         {
             Debug.Log("Mutation++");
+            Mutation1.Mutation += 1;
         } 
     }
 

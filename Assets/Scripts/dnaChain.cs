@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //usage: put this on my DNA prefabs to spawn the prefabs randomly 
 //also create matching pairs for 
@@ -16,6 +17,8 @@ public class dnaChain : MonoBehaviour
     public GameObject prefabC;
 
     public GameObject prefabG;
+
+    public Image p1Progress;
     
     //time left for player objects to appear
     public float timeLeft = 0f;
@@ -33,23 +36,31 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+            p1Progress.fillAmount += .01f;
+
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+            p1Progress.fillAmount += .01f;
+
 
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+            p1Progress.fillAmount += .01f;
+
 
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+            p1Progress.fillAmount += .01f;
+
 
         }
         

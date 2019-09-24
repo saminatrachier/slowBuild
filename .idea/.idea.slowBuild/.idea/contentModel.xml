@@ -11,6 +11,8 @@
           <e p="dnaChain2.cs" t="Include" />
           <e p="dnaSpawn.cs" t="Include" />
           <e p="dnaSpawn2.cs" t="Include" />
+          <e p="Mutation1.cs" t="Include" />
+          <e p="Mutation2.cs" t="Include" />
           <e p="player1A.cs" t="Include" />
           <e p="player1C.cs" t="Include" />
           <e p="player1G.cs" t="Include" />
