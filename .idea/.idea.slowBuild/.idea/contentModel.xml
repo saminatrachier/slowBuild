@@ -9,6 +9,11 @@
         <e p="Scripts" t="Include">
           <e p="dnaChain.cs" t="Include" />
           <e p="dnaSpawn.cs" t="Include" />
+          <e p="player1A.cs" t="Include" />
+          <e p="player1C.cs" t="Include" />
+          <e p="player1G.cs" t="Include" />
+          <e p="player1T.cs" t="Include" />
+          <e p="ScoreText1.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

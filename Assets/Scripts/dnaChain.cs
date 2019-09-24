@@ -8,30 +8,52 @@ using UnityEngine;
 
 public class dnaChain : MonoBehaviour
 {
-    List<GameObject> prefabList = new List<GameObject>();
+    //prefabs for the player input
+    public GameObject prefabA;
 
-    public GameObject PrefabA;
+    public GameObject prefabT;
 
-    public GameObject PrefabT;
+    public GameObject prefabC;
 
-    public GameObject PrefabC;
-
-    public GameObject PrefabG;
+    public GameObject prefabG;
+    
+    //time left for player objects to appear
+    public float timeLeft = 0f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        prefabList.Add(PrefabA);
-        prefabList.Add(PrefabC);
-        prefabList.Add(PrefabG);
-        prefabList.Add(PrefabT);
-
-        int prefabIndex = UnityEngine.Random.Range(0, 4);
-        Instantiate(prefabList[prefabIndex]);
+  
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Instantiate(prefabA, transform.position, transform.rotation);
+            this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Instantiate(prefabG, transform.position, transform.rotation);
+            this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Instantiate(prefabC, transform.position, transform.rotation);
+            this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Instantiate(prefabT, transform.position, transform.rotation);
+            this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+
+        }
+        
+    
         
     }
 }

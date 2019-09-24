@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player1OldSpawn
+  - T
+  - A
+  - G
+  - C
   layers:
   - Default
   - TransparentFX
