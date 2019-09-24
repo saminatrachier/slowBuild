@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2010832574431846334}
   - component: {fileID: 2825235902554673029}
   - component: {fileID: 7327269240771142805}
+  - component: {fileID: 2715345047837585726}
   m_Layer: 0
   m_Name: Player2C
   m_TagString: Player1OldSpawn
@@ -99,9 +100,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2379523025207331791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f68d4cc431daa8c43900168cf155856a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CChain: {fileID: 2379523025207331791}
+  G: {fileID: 0}
+--- !u!114 &2715345047837585726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379523025207331791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dab0ea1ea46be846a518d480e0b4633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CChain: {fileID: 2379523025207331791}
