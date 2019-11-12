@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on my DNA prefabs to spawn the prefabs randomly 
 //also create matching pairs for 
 //basically assign prefabs
@@ -32,6 +33,8 @@ public class dnaChain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
+    //player 1 inputs/controller
         if (Input.GetKeyDown(KeyCode.A))
         {
             Instantiate(prefabA, transform.position, transform.rotation);
