@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 //usage: create a UI score counter for player 1 when they make a correct match
 
 public class ScoreText1 : MonoBehaviour
@@ -19,6 +21,7 @@ public class ScoreText1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         text.text = Score.ToString();
     }
 }

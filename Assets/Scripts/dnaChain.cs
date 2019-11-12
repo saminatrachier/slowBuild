@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
-//usage: put this on my DNA prefabs to spawn the prefabs randomly 
-//also create matching pairs for 
+//usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
 //basically assign prefabs
 
 public class dnaChain : MonoBehaviour

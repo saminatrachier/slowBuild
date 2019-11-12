@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d2d773-1668-4150-babf-59b14a56460f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mutation1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mutation1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mutation2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mutation2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player1G.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player1G.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player1T.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player1T.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,32 +22,32 @@
     <session id="-1538303030">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.6" value="5" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5872" />
+          <entry key="cs" value="6441" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5872" />
+          <entry key="C#" value="6441" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="30" />
+          <entry key="cs" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="30" />
+          <entry key="C#" value="32" />
         </counts>
       </usages-collector>
     </session>
@@ -49,12 +57,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="300">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
               <folding>
-                <marker date="1569300475468" expanded="false" signature="6:100" ph="..." />
-                <marker date="1569300475468" expanded="true" signature="220:509" ph="{...}" />
-                <marker date="1569300475468" expanded="true" signature="350:399" ph="{...}" />
-                <marker date="1569300475468" expanded="true" signature="457:507" ph="{...}" />
+                <marker date="1573594537564" expanded="false" signature="6:100" ph="..." />
+                <marker date="1573594537564" expanded="true" signature="222:520" ph="{...}" />
+                <marker date="1573594537564" expanded="true" signature="352:401" ph="{...}" />
+                <marker date="1573594537564" expanded="true" signature="459:518" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -63,32 +72,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/player1T.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="75">
+              <caret line="7" selection-start-line="7" selection-end-line="8" />
               <folding>
-                <marker date="1569342538024" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569342538024" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-                <marker date="1569342538024" expanded="true" signature="273:1414" ph="{...}" />
-                <marker date="1569342538024" expanded="true" signature="401:951" ph="{...}" />
-                <marker date="1569342538024" expanded="true" signature="734:837" ph="{...}" />
-                <marker date="1569342538024" expanded="true" signature="850:944" ph="{...}" />
-                <marker date="1569342538024" expanded="true" signature="1009:1412" ph="{...}" />
-                <marker date="1569342538024" expanded="true" signature="1049:1406" ph="/* void OnCollisionEnter(Collision other) ... */" />
+                <marker date="1573594753146" expanded="false" signature="6:78" ph="..." />
+                <marker date="1573594753146" expanded="true" signature="80:287" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
+                <marker date="1573594753146" expanded="true" signature="325:1466" ph="{...}" />
+                <marker date="1573594753146" expanded="true" signature="453:1003" ph="{...}" />
+                <marker date="1573594753146" expanded="true" signature="786:889" ph="{...}" />
+                <marker date="1573594753146" expanded="true" signature="902:996" ph="{...}" />
+                <marker date="1573594753146" expanded="true" signature="1061:1464" ph="{...}" />
+                <marker date="1573594753146" expanded="true" signature="1101:1458" ph="/* void OnCollisionEnter(Collision other) ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="15">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
               <folding>
-                <marker date="1569335925835" expanded="false" signature="6:100" ph="..." />
-                <marker date="1569335925835" expanded="true" signature="220:514" ph="{...}" />
-                <marker date="1569335925835" expanded="true" signature="352:402" ph="{...}" />
-                <marker date="1569335925835" expanded="true" signature="460:512" ph="{...}" />
+                <marker date="1573594753096" expanded="false" signature="6:100" ph="..." />
+                <marker date="1573594753096" expanded="true" signature="220:514" ph="{...}" />
+                <marker date="1573594753096" expanded="true" signature="352:402" ph="{...}" />
+                <marker date="1573594753096" expanded="true" signature="460:512" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -97,17 +106,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+            <state relative-caret-position="690">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
-                <marker date="1569271521118" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569271521118" expanded="true" signature="118:193" ph="/* Usage: Spawn the prefabs randomly in a straight line for the DNA Chain ... */" />
-                <marker date="1569271521118" expanded="true" signature="231:1590" ph="{...}" />
-                <marker date="1569271521118" expanded="true" signature="643:1588" ph="{...}" />
-                <marker date="1569271521118" expanded="true" signature="687:1397" ph="{...}" />
-                <marker date="1569271521118" expanded="true" signature="847:1021" ph="/* while (currentDNACount &lt; maxDNACount) ... */" />
-                <marker date="1569271521118" expanded="true" signature="1463:1483" ph="{...}" />
-                <marker date="1569271521118" expanded="true" signature="1492:1581" ph="/* player input: ... */" />
+                <marker date="1573595613756" expanded="false" signature="6:78" ph="..." />
+                <marker date="1573595613756" expanded="true" signature="118:258" ph="/* Usage: Spawn the prefabs randomly in a straight line for the DNA Chain ... */" />
+                <marker date="1573595613756" expanded="true" signature="296:1458" ph="{...}" />
+                <marker date="1573595613756" expanded="true" signature="708:1456" ph="{...}" />
+                <marker date="1573595613756" expanded="true" signature="752:1355" ph="{...}" />
+                <marker date="1573595613756" expanded="true" signature="1421:1441" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -116,17 +123,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/player1G.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="75">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding>
-                <marker date="1569342551544" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569342551544" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-                <marker date="1569342551544" expanded="true" signature="273:1414" ph="{...}" />
-                <marker date="1569342551544" expanded="true" signature="401:951" ph="{...}" />
-                <marker date="1569342551544" expanded="true" signature="734:837" ph="{...}" />
-                <marker date="1569342551544" expanded="true" signature="850:944" ph="{...}" />
-                <marker date="1569342551544" expanded="true" signature="1009:1412" ph="{...}" />
-                <marker date="1569342551544" expanded="true" signature="1049:1406" ph="/* void OnCollisionEnter(Collision other) ... */" />
+                <marker date="1573594966244" expanded="true" signature="6:78" ph="..." />
+                <marker date="1573594966244" expanded="true" signature="80:287" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
+                <marker date="1573594966244" expanded="true" signature="326:1467" ph="{...}" />
+                <marker date="1573594966244" expanded="true" signature="454:1004" ph="{...}" />
+                <marker date="1573594966244" expanded="true" signature="787:890" ph="{...}" />
+                <marker date="1573594966244" expanded="true" signature="903:997" ph="{...}" />
+                <marker date="1573594966244" expanded="true" signature="1062:1465" ph="{...}" />
+                <marker date="1573594966244" expanded="true" signature="1102:1459" ph="/* void OnCollisionEnter(Collision other) ... */" />
               </folding>
             </state>
           </provider>
@@ -135,16 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="41" selection-start-line="41" selection-end-line="42" />
+            <state relative-caret-position="45">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
-                <marker date="1569343415810" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569343415810" expanded="true" signature="118:968" ph="{...}" />
-                <marker date="1569343415810" expanded="true" signature="491:582" ph="{...}" />
-                <marker date="1569343415810" expanded="true" signature="640:966" ph="{...}" />
-                <marker date="1569343415810" expanded="true" signature="673:735" ph="{...}" />
-                <marker date="1569343415810" expanded="true" signature="763:826" ph="{...}" />
-                <marker date="1569343415810" expanded="true" signature="854:960" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="6:78" ph="..." />
+                <marker date="1573594966274" expanded="true" signature="81:245" ph="/* USAGE: put this on player 1's camera to change the background color when a mutation occurs ... */" />
+                <marker date="1573594966274" expanded="true" signature="284:1134" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="657:748" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="806:1132" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="839:901" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="929:992" ph="{...}" />
+                <marker date="1573594966274" expanded="true" signature="1020:1126" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -153,16 +161,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation2.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" selection-start-line="23" selection-end-line="24" />
+            <state relative-caret-position="30">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
-                <marker date="1569343191651" expanded="true" signature="6:113" ph="..." />
-                <marker date="1569343191651" expanded="true" signature="154:1015" ph="{...}" />
-                <marker date="1569343191651" expanded="true" signature="527:617" ph="{...}" />
-                <marker date="1569343191651" expanded="true" signature="675:1013" ph="{...}" />
-                <marker date="1569343191651" expanded="true" signature="708:770" ph="{...}" />
-                <marker date="1569343191651" expanded="true" signature="798:861" ph="{...}" />
-                <marker date="1569343191651" expanded="true" signature="889:1007" ph="{...}" />
+                <marker date="1573594966288" expanded="false" signature="6:113" ph="..." />
+                <marker date="1573594966288" expanded="true" signature="115:279" ph="/* USAGE: put this on player 2's camera to change the background color when a mutation occurs ... */" />
+                <marker date="1573594966288" expanded="true" signature="319:1180" ph="{...}" />
+                <marker date="1573594966288" expanded="true" signature="692:782" ph="{...}" />
+                <marker date="1573594966288" expanded="true" signature="840:1178" ph="{...}" />
+                <marker date="1573594966288" expanded="true" signature="873:935" ph="{...}" />
+                <marker date="1573594966288" expanded="true" signature="963:1026" ph="{...}" />
+                <marker date="1573594966288" expanded="true" signature="1054:1172" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <marker date="1573595122177" expanded="false" signature="6:100" ph="..." />
+                <marker date="1573595122177" expanded="true" signature="102:273" ph="/* PURPOSE: player2 (ARROW KEYS) player controller and progress bar ... */" />
+                <marker date="1573595122177" expanded="true" signature="313:2113" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="720:761" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="819:2111" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="874:1086" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="1133:1346" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="1395:1608" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="1658:1871" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="1906:2017" ph="{...}" />
+                <marker date="1573595122177" expanded="true" signature="2030:2082" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -171,40 +202,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
+            <state relative-caret-position="-135">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
               <folding>
-                <marker date="1569344236463" expanded="true" signature="6:100" ph="..." />
-                <marker date="1569344236463" expanded="true" signature="102:229" ph="/* usage: put this on my DNA prefabs to spawn the prefabs randomly ... */" />
-                <marker date="1569344236463" expanded="true" signature="268:1744" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="619:634" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="692:1742" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="739:951" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="992:1205" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="1246:1459" ph="{...}" />
-                <marker date="1569344236463" expanded="true" signature="1500:1713" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="77" column="31" lean-forward="true" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-              <folding>
-                <marker date="1569345515764" expanded="true" signature="6:100" ph="..." />
-                <marker date="1569345515764" expanded="true" signature="102:229" ph="/* usage: put this on my DNA prefabs to spawn the prefabs randomly ... */" />
-                <marker date="1569345515764" expanded="true" signature="269:2069" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="676:717" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="775:2067" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="830:1042" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="1089:1302" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="1351:1564" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="1614:1827" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="1862:1973" ph="{...}" />
-                <marker date="1569345515764" expanded="true" signature="1986:2038" ph="{...}" />
+                <marker date="1573595122195" expanded="false" signature="6:100" ph="..." />
+                <marker date="1573595122195" expanded="true" signature="102:266" ph="/* PURPOSE: player1 (WASD) player controller and progress bar ... */" />
+                <marker date="1573595122195" expanded="true" signature="305:1819" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="656:671" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="729:1817" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="814:1026" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="1067:1280" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="1321:1534" ph="{...}" />
+                <marker date="1573595122195" expanded="true" signature="1575:1788" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -235,48 +244,48 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1T.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2G.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mutation2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2T.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mutation1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1C.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2C.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2G.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1C.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2A.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1G.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player2C.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1A.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mutation1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1G.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player1T.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mutation2.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/DNA.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/dnaSpawn2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/ScoreText2.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/player1A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/player2A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/player2C.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/player2G.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player2/player2T.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player1A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player1C.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player1T.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player1G.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player2A.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player2G.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player2T.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player2C.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player1T.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player1G.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mutation2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mutation1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" />
       </list>
     </option>
   </component>
@@ -286,7 +295,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="60" />
     <option name="y" value="125" />
     <option name="width" value="645" />
@@ -344,11 +353,12 @@
       <workItem from="1569300568240" duration="81000" />
       <workItem from="1569335892445" duration="474000" />
       <workItem from="1569339892864" duration="6009000" />
+      <workItem from="1573594253158" duration="1471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27000000" />
+    <option name="totallyTimeSpent" value="28471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,8 +370,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.026174497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -404,19 +413,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" initialLine="19">
-            <startOffsets>
-              <option value="930" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1021" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -435,16 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <marker date="1569342484929" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342484929" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342484929" expanded="true" signature="273:1414" ph="{...}" />
-            <marker date="1569342484929" expanded="true" signature="401:951" ph="{...}" />
-            <marker date="1569342484929" expanded="true" signature="734:837" ph="{...}" />
-            <marker date="1569342484929" expanded="true" signature="850:944" ph="{...}" />
-            <marker date="1569342484929" expanded="true" signature="1009:1412" ph="{...}" />
-            <marker date="1569342484929" expanded="true" signature="1049:1406" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -452,16 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <marker date="1569342838144" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342838144" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342838144" expanded="true" signature="273:1415" ph="{...}" />
-            <marker date="1569342838144" expanded="true" signature="401:952" ph="{...}" />
-            <marker date="1569342838144" expanded="true" signature="734:838" ph="{...}" />
-            <marker date="1569342838144" expanded="true" signature="851:945" ph="{...}" />
-            <marker date="1569342838144" expanded="true" signature="1010:1413" ph="{...}" />
-            <marker date="1569342838144" expanded="true" signature="1050:1407" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -469,16 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <marker date="1569342838173" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342838173" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342838173" expanded="true" signature="273:1416" ph="{...}" />
-            <marker date="1569342838173" expanded="true" signature="401:953" ph="{...}" />
-            <marker date="1569342838173" expanded="true" signature="734:838" ph="{...}" />
-            <marker date="1569342838173" expanded="true" signature="851:946" ph="{...}" />
-            <marker date="1569342838173" expanded="true" signature="1011:1414" ph="{...}" />
-            <marker date="1569342838173" expanded="true" signature="1051:1408" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -486,16 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <marker date="1569342838160" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342838160" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342838160" expanded="true" signature="273:1416" ph="{...}" />
-            <marker date="1569342838160" expanded="true" signature="401:953" ph="{...}" />
-            <marker date="1569342838160" expanded="true" signature="734:838" ph="{...}" />
-            <marker date="1569342838160" expanded="true" signature="851:946" ph="{...}" />
-            <marker date="1569342838160" expanded="true" signature="1011:1414" ph="{...}" />
-            <marker date="1569342838160" expanded="true" signature="1051:1408" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -503,15 +459,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
-            <marker date="1569342838185" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342838185" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342838185" expanded="true" signature="273:1416" ph="{...}" />
-            <marker date="1569342838185" expanded="true" signature="401:953" ph="{...}" />
-            <marker date="1569342838185" expanded="true" signature="734:838" ph="{...}" />
-            <marker date="1569342838185" expanded="true" signature="851:946" ph="{...}" />
-            <marker date="1569342838185" expanded="true" signature="1011:1414" ph="{...}" />
-            <marker date="1569342838185" expanded="true" signature="1051:1408" ph="/* void OnCollisionEnter(Collision other) ... */" />
+            <marker date="1573594537564" expanded="false" signature="6:100" ph="..." />
+            <marker date="1573594537564" expanded="true" signature="222:520" ph="{...}" />
+            <marker date="1573594537564" expanded="true" signature="352:401" ph="{...}" />
+            <marker date="1573594537564" expanded="true" signature="459:518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -533,148 +492,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText1.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-135">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
           <folding>
-            <marker date="1569300475468" expanded="false" signature="6:100" ph="..." />
-            <marker date="1569300475468" expanded="true" signature="220:509" ph="{...}" />
-            <marker date="1569300475468" expanded="true" signature="350:399" ph="{...}" />
-            <marker date="1569300475468" expanded="true" signature="457:507" ph="{...}" />
+            <marker date="1573595122195" expanded="false" signature="6:100" ph="..." />
+            <marker date="1573595122195" expanded="true" signature="102:266" ph="/* PURPOSE: player1 (WASD) player controller and progress bar ... */" />
+            <marker date="1573595122195" expanded="true" signature="305:1819" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="656:671" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="729:1817" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="814:1026" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="1067:1280" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="1321:1534" ph="{...}" />
+            <marker date="1573595122195" expanded="true" signature="1575:1788" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/player1T.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
           <folding>
-            <marker date="1569342538024" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342538024" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342538024" expanded="true" signature="273:1414" ph="{...}" />
-            <marker date="1569342538024" expanded="true" signature="401:951" ph="{...}" />
-            <marker date="1569342538024" expanded="true" signature="734:837" ph="{...}" />
-            <marker date="1569342538024" expanded="true" signature="850:944" ph="{...}" />
-            <marker date="1569342538024" expanded="true" signature="1009:1412" ph="{...}" />
-            <marker date="1569342538024" expanded="true" signature="1049:1406" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <marker date="1569335925835" expanded="false" signature="6:100" ph="..." />
-            <marker date="1569335925835" expanded="true" signature="220:514" ph="{...}" />
-            <marker date="1569335925835" expanded="true" signature="352:402" ph="{...}" />
-            <marker date="1569335925835" expanded="true" signature="460:512" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding>
-            <marker date="1569271521118" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569271521118" expanded="true" signature="118:193" ph="/* Usage: Spawn the prefabs randomly in a straight line for the DNA Chain ... */" />
-            <marker date="1569271521118" expanded="true" signature="231:1590" ph="{...}" />
-            <marker date="1569271521118" expanded="true" signature="643:1588" ph="{...}" />
-            <marker date="1569271521118" expanded="true" signature="687:1397" ph="{...}" />
-            <marker date="1569271521118" expanded="true" signature="847:1021" ph="/* while (currentDNACount &lt; maxDNACount) ... */" />
-            <marker date="1569271521118" expanded="true" signature="1463:1483" ph="{...}" />
-            <marker date="1569271521118" expanded="true" signature="1492:1581" ph="/* player input: ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/player1G.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <marker date="1569342551544" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569342551544" expanded="true" signature="80:235" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
-            <marker date="1569342551544" expanded="true" signature="273:1414" ph="{...}" />
-            <marker date="1569342551544" expanded="true" signature="401:951" ph="{...}" />
-            <marker date="1569342551544" expanded="true" signature="734:837" ph="{...}" />
-            <marker date="1569342551544" expanded="true" signature="850:944" ph="{...}" />
-            <marker date="1569342551544" expanded="true" signature="1009:1412" ph="{...}" />
-            <marker date="1569342551544" expanded="true" signature="1049:1406" ph="/* void OnCollisionEnter(Collision other) ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="41" selection-start-line="41" selection-end-line="42" />
-          <folding>
-            <marker date="1569343415810" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569343415810" expanded="true" signature="118:968" ph="{...}" />
-            <marker date="1569343415810" expanded="true" signature="491:582" ph="{...}" />
-            <marker date="1569343415810" expanded="true" signature="640:966" ph="{...}" />
-            <marker date="1569343415810" expanded="true" signature="673:735" ph="{...}" />
-            <marker date="1569343415810" expanded="true" signature="763:826" ph="{...}" />
-            <marker date="1569343415810" expanded="true" signature="854:960" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" selection-start-line="23" selection-end-line="24" />
-          <folding>
-            <marker date="1569343191651" expanded="true" signature="6:113" ph="..." />
-            <marker date="1569343191651" expanded="true" signature="154:1015" ph="{...}" />
-            <marker date="1569343191651" expanded="true" signature="527:617" ph="{...}" />
-            <marker date="1569343191651" expanded="true" signature="675:1013" ph="{...}" />
-            <marker date="1569343191651" expanded="true" signature="708:770" ph="{...}" />
-            <marker date="1569343191651" expanded="true" signature="798:861" ph="{...}" />
-            <marker date="1569343191651" expanded="true" signature="889:1007" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="36" column="73" selection-start-line="36" selection-start-column="73" selection-end-line="36" selection-end-column="73" />
-          <folding>
-            <marker date="1569344236463" expanded="true" signature="6:100" ph="..." />
-            <marker date="1569344236463" expanded="true" signature="102:229" ph="/* usage: put this on my DNA prefabs to spawn the prefabs randomly ... */" />
-            <marker date="1569344236463" expanded="true" signature="268:1744" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="619:634" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="692:1742" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="739:951" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="992:1205" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="1246:1459" ph="{...}" />
-            <marker date="1569344236463" expanded="true" signature="1500:1713" ph="{...}" />
+            <marker date="1573594753146" expanded="false" signature="6:78" ph="..." />
+            <marker date="1573594753146" expanded="true" signature="80:287" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
+            <marker date="1573594753146" expanded="true" signature="325:1466" ph="{...}" />
+            <marker date="1573594753146" expanded="true" signature="453:1003" ph="{...}" />
+            <marker date="1573594753146" expanded="true" signature="786:889" ph="{...}" />
+            <marker date="1573594753146" expanded="true" signature="902:996" ph="{...}" />
+            <marker date="1573594753146" expanded="true" signature="1061:1464" ph="{...}" />
+            <marker date="1573594753146" expanded="true" signature="1101:1458" ph="/* void OnCollisionEnter(Collision other) ... */" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="77" column="31" lean-forward="true" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        <state relative-caret-position="45">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding>
-            <marker date="1569345515764" expanded="true" signature="6:100" ph="..." />
-            <marker date="1569345515764" expanded="true" signature="102:229" ph="/* usage: put this on my DNA prefabs to spawn the prefabs randomly ... */" />
-            <marker date="1569345515764" expanded="true" signature="269:2069" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="676:717" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="775:2067" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="830:1042" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="1089:1302" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="1351:1564" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="1614:1827" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="1862:1973" ph="{...}" />
-            <marker date="1569345515764" expanded="true" signature="1986:2038" ph="{...}" />
+            <marker date="1573595122177" expanded="false" signature="6:100" ph="..." />
+            <marker date="1573595122177" expanded="true" signature="102:273" ph="/* PURPOSE: player2 (ARROW KEYS) player controller and progress bar ... */" />
+            <marker date="1573595122177" expanded="true" signature="313:2113" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="720:761" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="819:2111" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="874:1086" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="1133:1346" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="1395:1608" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="1658:1871" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="1906:2017" ph="{...}" />
+            <marker date="1573595122177" expanded="true" signature="2030:2082" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <marker date="1573594966288" expanded="false" signature="6:113" ph="..." />
+            <marker date="1573594966288" expanded="true" signature="115:279" ph="/* USAGE: put this on player 2's camera to change the background color when a mutation occurs ... */" />
+            <marker date="1573594966288" expanded="true" signature="319:1180" ph="{...}" />
+            <marker date="1573594966288" expanded="true" signature="692:782" ph="{...}" />
+            <marker date="1573594966288" expanded="true" signature="840:1178" ph="{...}" />
+            <marker date="1573594966288" expanded="true" signature="873:935" ph="{...}" />
+            <marker date="1573594966288" expanded="true" signature="963:1026" ph="{...}" />
+            <marker date="1573594966288" expanded="true" signature="1054:1172" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Mutation1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <marker date="1573594966274" expanded="true" signature="6:78" ph="..." />
+            <marker date="1573594966274" expanded="true" signature="81:245" ph="/* USAGE: put this on player 1's camera to change the background color when a mutation occurs ... */" />
+            <marker date="1573594966274" expanded="true" signature="284:1134" ph="{...}" />
+            <marker date="1573594966274" expanded="true" signature="657:748" ph="{...}" />
+            <marker date="1573594966274" expanded="true" signature="806:1132" ph="{...}" />
+            <marker date="1573594966274" expanded="true" signature="839:901" ph="{...}" />
+            <marker date="1573594966274" expanded="true" signature="929:992" ph="{...}" />
+            <marker date="1573594966274" expanded="true" signature="1020:1126" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/player1G.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <marker date="1573594966244" expanded="true" signature="6:78" ph="..." />
+            <marker date="1573594966244" expanded="true" signature="80:287" ph="/* USAGE: put this on the spawning prefabs to make sure the player has the correct input ... */" />
+            <marker date="1573594966244" expanded="true" signature="326:1467" ph="{...}" />
+            <marker date="1573594966244" expanded="true" signature="454:1004" ph="{...}" />
+            <marker date="1573594966244" expanded="true" signature="787:890" ph="{...}" />
+            <marker date="1573594966244" expanded="true" signature="903:997" ph="{...}" />
+            <marker date="1573594966244" expanded="true" signature="1062:1465" ph="{...}" />
+            <marker date="1573594966244" expanded="true" signature="1102:1459" ph="/* void OnCollisionEnter(Collision other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <marker date="1573595613756" expanded="false" signature="6:78" ph="..." />
+            <marker date="1573595613756" expanded="true" signature="118:258" ph="/* Usage: Spawn the prefabs randomly in a straight line for the DNA Chain ... */" />
+            <marker date="1573595613756" expanded="true" signature="296:1458" ph="{...}" />
+            <marker date="1573595613756" expanded="true" signature="708:1456" ph="{...}" />
+            <marker date="1573595613756" expanded="true" signature="752:1355" ph="{...}" />
+            <marker date="1573595613756" expanded="true" signature="1421:1441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <marker date="1573594753096" expanded="false" signature="6:100" ph="..." />
+            <marker date="1573594753096" expanded="true" signature="220:514" ph="{...}" />
+            <marker date="1573594753096" expanded="true" signature="352:402" ph="{...}" />
+            <marker date="1573594753096" expanded="true" signature="460:512" ph="{...}" />
           </folding>
         </state>
       </provider>

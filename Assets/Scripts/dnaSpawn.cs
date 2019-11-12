@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 //Usage: Spawn the prefabs randomly in a straight line for the DNA Chain
-//
+//Purpose: creates a DNA list for player 1 to match their inputs tp
 public class dnaSpawn : MonoBehaviour
 {
     //public dnaChain myDNAPrefab;
@@ -33,9 +33,9 @@ public class dnaSpawn : MonoBehaviour
 
 
             int currentDNACount = 0;
-            //while (currentDNACount < maxDNACount)
-            //{
-                // dnaChain newDNAClone = (dnaChain) Instantiate(myDNAPrefab, transform.position, transform.rotation);
+       
+            
+            //creates a list of the DNA components prefabs
                 myDNAList.Add(PrefabA);
                 myDNAList.Add(PrefabC);
                 myDNAList.Add(PrefabT);
@@ -51,8 +51,7 @@ public class dnaSpawn : MonoBehaviour
         void Update()
         {
         }
-        //player input:
-        //if player presses the correct key then another key should spawn
+       
 
     }
 }

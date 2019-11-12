@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//USAGE: put this on player 2's camera to change the background color when a mutation occurs
+//purpose: Player 2's visual mutation tracker (screen background color)
 public class Mutation2 : MonoBehaviour
 
 {

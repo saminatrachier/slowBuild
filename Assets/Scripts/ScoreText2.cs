@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//usage: create a UI score counter for player 1 when they make a correct match
+//usage: create a UI score counter for player 2 when they make a correct match
 
 public class ScoreText2 : MonoBehaviour
 {

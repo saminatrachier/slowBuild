@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//usage: put this on my DNA prefabs to spawn the prefabs randomly 
-//also create matching pairs for 
+//PURPOSE: player2 (ARROW KEYS) player controller and progress bar
+//usage: put this on  player2enemyspawnmanager to spawn the prefabs randomly 
 //basically assign prefabs
 
 public class dnaChain2 : MonoBehaviour

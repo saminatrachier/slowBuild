@@ -4,6 +4,8 @@ using UnityEngine;
 
 //USAGE: put this on the spawning prefabs to make sure the player has the correct input
 //put this on the spawning dna and put a tag on the player's pieces
+
+//player's C component score and mutation tracking
 public class player1C : MonoBehaviour
 {
     public GameObject CChain;
