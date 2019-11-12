@@ -619,7 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color3: {r: 255, g: 0, b: 0, a: 255}
   color2: {r: 1, g: 0.3726415, b: 0.3726415, a: 255}
-  color1: {r: 1, g: 0.6933962, b: 0.6933962, a: 255}
+  color1: {r: 1, g: 1, b: 1, a: 255}
   cam1: {fileID: 534669904}
   gameOverText: {fileID: 1486318047}
 --- !u!1 &590462145
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color3: {r: 255, g: 0, b: 0, a: 255}
   color2: {r: 1, g: 0.37254903, b: 0.37254903, a: 255}
-  color1: {r: 340.44495, g: 236.30885, b: 236.30885, a: 255}
+  color1: {r: 340.44495, g: 237.06377, b: 237.06377, a: 255}
   cam2: {fileID: 739129656}
   gameOverText: {fileID: 313179097}
 --- !u!1 &797819102 stripped
