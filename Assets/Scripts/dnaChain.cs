@@ -34,14 +34,14 @@ public class dnaChain : MonoBehaviour
     {
     
     //player 1 inputs/controller
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left"))
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
             p1Progress.fillAmount += .01f;
 
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -49,7 +49,7 @@ public class dnaChain : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -57,7 +57,7 @@ public class dnaChain : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D)|| Input.GetButtonDown("P1 Right") )
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
