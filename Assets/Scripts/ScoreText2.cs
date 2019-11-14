@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 //usage: create a UI score counter for player 2 when they make a correct match
 
 public class ScoreText2 : MonoBehaviour
 {
-    private Text text2;
+    private TextMeshProUGUI text2;
 
     public static int Score2;
     
     // Start is called before the first frame update
     void Start()
     {
-        text2 = GetComponent<Text>();
+        text2 = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

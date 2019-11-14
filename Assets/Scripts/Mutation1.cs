@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 //USAGE: put this on player 1's camera to change the background color when a mutation occurs
