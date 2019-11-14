@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 //USAGE: put this on player 1's camera to change the background color when a mutation occurs
@@ -24,6 +25,7 @@ public class Mutation1 : MonoBehaviour
     {
         cam1 = GetComponent<Camera>();
         gameOverText.SetActive(false);
+        Mutation = 0;
 
     }
 
@@ -44,6 +46,10 @@ public class Mutation1 : MonoBehaviour
         {
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
+            if (Mutation2.Mutation >= 3)
+            {
+                SceneManager.LoadScene (2);
+            }
 
         }
     }

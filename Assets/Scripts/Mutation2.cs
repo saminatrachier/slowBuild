@@ -17,11 +17,14 @@ public class Mutation2 : MonoBehaviour
     public Camera cam2;
 
     public GameObject gameOverText;
+    
+    public GameObject mutation;
 
     public static int Mutation = 0;
     // Start is called before the first frame update
     void Start()
     {
+        Mutation = 0;
         cam2 = GetComponent<Camera>();
         gameOverText.SetActive(false);
     }
@@ -43,7 +46,14 @@ public class Mutation2 : MonoBehaviour
         {
             cam2.backgroundColor = color3;
             gameOverText.SetActive(true);
-            
+
+            if (Mutation1.Mutation >= 3)
+            {
+                SceneManager.LoadScene (2);
+            }
+
+
         }
     }
+
 }
