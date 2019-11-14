@@ -34,14 +34,14 @@ public class dnaChain : MonoBehaviour
     {
     
     //player 1 inputs/controller
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left"))
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left")) && Mutation1.Mutation < 3)
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
             p1Progress.fillAmount += .01f;
 
         }
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3)
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -49,7 +49,7 @@ public class dnaChain : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))&& Mutation1.Mutation < 3)
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -57,7 +57,7 @@ public class dnaChain : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.D)|| Input.GetButtonDown("P1 Right") )
+        if ((Input.GetKeyDown(KeyCode.D)|| Input.GetButtonDown("P1 Right") ) && Mutation1.Mutation < 3)
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));

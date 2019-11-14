@@ -36,14 +36,14 @@ public class dnaChain2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))&& Mutation2.Mutation < 3)
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
             p2Progress.fillAmount += .01f;
 
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))
+        if ((Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))&& Mutation2.Mutation < 3)
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -51,7 +51,7 @@ public class dnaChain2 : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))
+        if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3)
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -59,7 +59,7 @@ public class dnaChain2 : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetButtonDown("P2 Right") )
+        if ((Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetButtonDown("P2 Right") )&& Mutation2.Mutation < 3)
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
