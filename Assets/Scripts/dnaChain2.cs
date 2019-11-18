@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //PURPOSE: player2 (ARROW KEYS) player controller and progress bar
@@ -36,14 +37,14 @@ public class dnaChain2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))&& Mutation2.Mutation < 3)
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
             p2Progress.fillAmount += .01f;
 
         }
-        if ((Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))&& Mutation2.Mutation < 3)
+        if ((Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -51,7 +52,7 @@ public class dnaChain2 : MonoBehaviour
 
 
         }
-        if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3)
+        if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -59,7 +60,7 @@ public class dnaChain2 : MonoBehaviour
 
 
         }
-        if ((Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetButtonDown("P2 Right") )&& Mutation2.Mutation < 3)
+        if ((Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetButtonDown("P2 Right") )&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
@@ -68,14 +69,15 @@ public class dnaChain2 : MonoBehaviour
 
         }
         
-        if (timeLeft > 0)
+        if (timeLeft > 0 && cameraCinematic.startCinematic == false)
         {
             timeLeft -= Time.deltaTime;
             timer.fillAmount = timeLeft / maxTime;
         }
-        else
+        else if (cameraCinematic.startCinematic == false)
         {
             Time.timeScale = 0;
+            SceneManager.LoadScene (2);
         }
         
     
