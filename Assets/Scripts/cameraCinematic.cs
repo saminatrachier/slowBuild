@@ -28,8 +28,7 @@ public class cameraCinematic : MonoBehaviour
         //Debug code that checks the axis of the controllers
         p1Vert = Input.GetAxis("P1 Vertical");
         p2Vert = Input.GetAxis("P2 Vertical");
-        Debug.Log(p1Vert);
-        Debug.Log(p2Vert);
+
         
         if (startCinematic == true)
         {

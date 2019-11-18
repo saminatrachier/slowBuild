@@ -41,7 +41,14 @@ public class dnaChain2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("inputMade is " + inputMade);
+        if (inputMade)
+        {
+            Debug.Log("Input has been made by Player 2. You are now able to steal, Player 1");
+        }
+        else
+        {
+            Debug.Log("Slow your roll, Player 1. You can't steal yet because there is no input.");
+        }
         
         
         if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)

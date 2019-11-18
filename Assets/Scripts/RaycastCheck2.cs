@@ -8,6 +8,7 @@ using UnityEngine;
 //steal mechanic. When the steal mechanic is activated, it will delete the prefab away.
 public class RaycastCheck2 : MonoBehaviour
 {
+    [Header("Got Variables")]
     public static bool gotG;
 
     public static bool gotC;
@@ -18,8 +19,9 @@ public class RaycastCheck2 : MonoBehaviour
 
     private bool blockStolen;
 
-
-    //Scripts that reference DNA Chain 2 game objects
+    
+    [Header("Prefabs Player 2")]
+    //game objects that reference DNA Chain 2 game objects
 
     public GameObject prefabG;
 
@@ -28,6 +30,10 @@ public class RaycastCheck2 : MonoBehaviour
     public GameObject prefabA;
 
     public GameObject prefabT;
+    
+    //Reference position of the opposing blocks
+
+    public Vector3 opposingBlockPos;
 
 
 
@@ -49,16 +55,24 @@ public class RaycastCheck2 : MonoBehaviour
 
     void Update()
     {
+        
+       
 
         //First, we create a raycast that this object will make to check what the current opposing block is.
         Ray checkRay = new Ray(transform.position, -transform.right);
         RaycastHit hit;
         float myMaxDistance = 5f;
 
+        
+
 
         //Then we check what each raycast is hitting
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform.tag == "G")
         {
+            //Reference to where the current opposing block is.
+            //This helps when replacing the block later
+            opposingBlockPos = hit.transform.position;
+            
             //The tags help us tell which is which.
             Debug.Log("The Current Enemy Block is a G");
 
@@ -81,6 +95,11 @@ public class RaycastCheck2 : MonoBehaviour
         }
         else if (hit.transform.tag == "C")
         {
+            
+            //Reference to where the current opposing block is.
+            //This helps when replacing the block later
+            opposingBlockPos = hit.transform.position;
+            
             if (DeletionMutation1.stealDNA)
             {
 
@@ -96,6 +115,11 @@ public class RaycastCheck2 : MonoBehaviour
         }
         else if (hit.transform.tag == "A")
         {
+            
+            //Reference to where the current opposing block is.
+            //This helps when replacing the block later
+            opposingBlockPos = hit.transform.position;
+            
             if (DeletionMutation1.stealDNA)
             {
 
@@ -111,6 +135,10 @@ public class RaycastCheck2 : MonoBehaviour
         }
         else if (hit.transform.tag == "T")
         {
+            //Reference to where the current opposing block is.
+            //This helps when replacing the block later
+            opposingBlockPos = hit.transform.position;
+            
             if (DeletionMutation1.stealDNA)
             {
 
@@ -125,19 +153,23 @@ public class RaycastCheck2 : MonoBehaviour
             }
         }
 
+        ///Insertion 
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && Input.GetKeyDown(KeyCode.Q))
         {
             if (DeletionMutation1.createG)
             {
+                Debug.Log("Place the Block In");
                 //We need to get the opposing block to be deleted
                 Destroy(hit.transform.gameObject);
                 //then raycastcheck 2 creates a new block in its place.
+                //We should get the position of it.
                 Instantiate(prefabG, new Vector3(47, 2, 0), transform.rotation);
                 DeletionMutation1.createG = false;
             }
 
             if (DeletionMutation1.createC)
             {
+                Debug.Log("Place the Block In");
                 //We need to get the opposing block to be deleted
                 Destroy(hit.transform.gameObject);
                 //then raycastcheck 2 creates a new block in its place.
@@ -147,6 +179,7 @@ public class RaycastCheck2 : MonoBehaviour
 
             if (DeletionMutation1.createA)
             {
+                Debug.Log("Place the Block In");
                 //We need to get the opposing block to be deleted
                 Destroy(hit.transform.gameObject);
                 //then raycastcheck 2 creates a new block in its place.
@@ -154,14 +187,17 @@ public class RaycastCheck2 : MonoBehaviour
                 DeletionMutation1.createA = false;
 
 
-                if (DeletionMutation1.createT)
-                {
-                    //We need to get the opposing block to be deleted
-                    Destroy(hit.transform.gameObject);
-                    //then raycastcheck 2 creates a new block in its place.
-                    Instantiate(prefabT, new Vector3(47, 2, 0), transform.rotation);
-                    DeletionMutation1.createT = false;
-                }
+                
+            }
+            
+            if (DeletionMutation1.createT)
+            {
+                Debug.Log("Place the Block In");
+                //We need to get the opposing block to be deleted
+                Destroy(hit.transform.gameObject);
+                //then raycastcheck 2 creates a new block in its place.
+                Instantiate(prefabT, new Vector3(47, 2, 0), transform.rotation);
+                DeletionMutation1.createT = false;
             }
 
 

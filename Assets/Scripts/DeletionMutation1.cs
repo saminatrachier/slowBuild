@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
 using UnityEngine;
+using TMPro;
 
 //USAGE: This script is where information relating to the Stealing/Insertion Mechanic is held.
 //PURPOSE: When Q is pressed after the power up bar is filled up, stealDNA is set to true. 
@@ -23,6 +24,9 @@ public class DeletionMutation1 : MonoBehaviour
     public static bool createC;
     public static bool createA;
     public static bool createT;
+
+    public TextMeshProUGUI holdText;
+    
     void Start()
     {
         stealDNA = false;
@@ -34,6 +38,8 @@ public class DeletionMutation1 : MonoBehaviour
         createC = false;
         createA = false;
         createT = false;
+
+        holdText.text = "HOLD:";
 
     }
 
@@ -56,28 +62,29 @@ public class DeletionMutation1 : MonoBehaviour
             if (RaycastCheck2.gotG)
             {
                 //Put a UI thing that shows the current holding dna block;
+                holdText.text = "HOLD: G";
                 createG = true;
             }
 
             if (RaycastCheck2.gotC)
             {
+                holdText.text = "HOLD: C";
                 createC = true;
             }
             
             if (RaycastCheck2.gotA)
             {
+                holdText.text = "HOLD: A";
                 createA = true;
             }
             
             if (RaycastCheck2.gotT)
             {
+                holdText.text = "HOLD: T";
                 createT = true;
             }
         }
-        else
-        {
-            Debug.Log("Can't Steal Now. Bar for P2 Needs to Fill");
-        }
+       
        
     }
 }
