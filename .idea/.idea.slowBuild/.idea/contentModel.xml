@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="buttonScript.cs" t="Include" />
+          <e p="cameraCinematic.cs" t="Include" />
           <e p="DeletionMutation1.cs" t="Include" />
           <e p="dnaChain.cs" t="Include" />
           <e p="dnaChain2.cs" t="Include" />

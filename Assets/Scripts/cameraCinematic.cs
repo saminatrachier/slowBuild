@@ -10,15 +10,27 @@ public class cameraCinematic : MonoBehaviour
     
     public GameObject camera1;
     public GameObject camera2;
+
+    public float p1Vert;
+
+    public float p2Vert;
     // Start is called before the first frame update
     void Start()
     {
         startCinematic = true;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug code that checks the axis of the controllers
+        p1Vert = Input.GetAxis("P1 Vertical");
+        p2Vert = Input.GetAxis("P2 Vertical");
+        Debug.Log(p1Vert);
+        Debug.Log(p2Vert);
+        
         if (startCinematic == true)
         {
             transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.5f * Time.deltaTime);
@@ -29,12 +41,12 @@ public class cameraCinematic : MonoBehaviour
             startCinematic = false;
         }
         
-        if ((Input.GetKey(KeyCode.RightShift))&& Mutation2.Mutation < 3 && startCinematic == false)
+        if ((Input.GetKey(KeyCode.RightShift)) || Input.GetAxis("P2 Vertical") <= -1 && Mutation2.Mutation < 3 && startCinematic == false)
         {
             camera2.GetComponent<Transform> ().Translate (new Vector3 (0, 0.1f));
 
         }
-        else if ((Input.GetKey(KeyCode.Space))&& Mutation2.Mutation < 3 && startCinematic == false)
+        else if ((Input.GetKey(KeyCode.Space)) || Input.GetAxis("P1 Vertical") <= -1  && Mutation2.Mutation < 3 && startCinematic == false)
         {
             camera1.GetComponent<Transform> ().Translate (new Vector3 (0, 0.1f));
 
