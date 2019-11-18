@@ -7,6 +7,9 @@ public class cameraCinematic : MonoBehaviour
     public GameObject player;
 
     public static bool startCinematic;
+    
+    public GameObject camera1;
+    public GameObject camera2;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,17 @@ public class cameraCinematic : MonoBehaviour
         if (transform.position.y <= 1f)
         {
             startCinematic = false;
+        }
+        
+        if ((Input.GetKey(KeyCode.RightShift))&& Mutation2.Mutation < 3 && startCinematic == false)
+        {
+            camera2.GetComponent<Transform> ().Translate (new Vector3 (0, 0.1f));
+
+        }
+        else if ((Input.GetKey(KeyCode.Space))&& Mutation2.Mutation < 3 && startCinematic == false)
+        {
+            camera1.GetComponent<Transform> ().Translate (new Vector3 (0, 0.1f));
+
         }
     }
 }
