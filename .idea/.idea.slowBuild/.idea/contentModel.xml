@@ -7,6 +7,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="buttonScript.cs" t="Include" />
+          <e p="DeletionMutation1.cs" t="Include" />
           <e p="dnaChain.cs" t="Include" />
           <e p="dnaChain2.cs" t="Include" />
           <e p="dnaSpawn.cs" t="Include" />
@@ -21,6 +23,7 @@
           <e p="player2C.cs" t="Include" />
           <e p="player2G.cs" t="Include" />
           <e p="player2T.cs" t="Include" />
+          <e p="RaycastCheck2.cs" t="Include" />
           <e p="ScoreText1.cs" t="Include" />
           <e p="ScoreText2.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
