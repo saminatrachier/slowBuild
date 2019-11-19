@@ -2282,11 +2282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594065dbb2b75214a941716be3ec93b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabG: {fileID: 2434957538093249293, guid: 999f5121d140afa4c9eeffc5050e6a47, type: 3}
-  prefabC: {fileID: 2379523025207331791, guid: ac226a3302fd6804bb2394b16c5a385b, type: 3}
-  prefabA: {fileID: 5259597104474053400, guid: a9800d0abe24a104c8f08e7c553771be, type: 3}
-  prefabT: {fileID: 72225002943649565, guid: cdc443798b062974cb79563f21a3b424, type: 3}
+  prefabG: {fileID: 8310438426600654222, guid: ae37d19f720c3e64d9f93d7cbfd3659b, type: 3}
+  prefabC: {fileID: 681501621888433961, guid: 4303dcd64de389749bd6a6990d3023e8, type: 3}
+  prefabA: {fileID: 6611469345928403309, guid: 0d2f43ac904bef447b67398c0a189f01, type: 3}
+  prefabT: {fileID: 114239548142056977, guid: 0673ba2bc45bbed4b9c19d3416f3ccb7, type: 3}
   opposingBlockPos: {x: 0, y: 0, z: 0}
+  thisBlockPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1707587750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdText: {fileID: 1245639097}
+  player1Spawn: {fileID: 1707587750}
+  dnaChainScript: {fileID: 1707587753}
 --- !u!4 &1707587752
 Transform:
   m_ObjectHideFlags: 0

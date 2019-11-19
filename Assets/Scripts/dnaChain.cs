@@ -32,20 +32,20 @@ public class dnaChain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        
     //player 1 inputs/controller
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left")) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
-            p1Progress.fillAmount += .01f;
+            p1Progress.fillAmount += .05f;
 
         }
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
-            p1Progress.fillAmount += .01f;
+            p1Progress.fillAmount += .05f;
 
 
         }
@@ -53,7 +53,7 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
-            p1Progress.fillAmount += .01f;
+            p1Progress.fillAmount += .05f;
 
 
         }
@@ -61,12 +61,21 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
-            p1Progress.fillAmount += .01f;
+            p1Progress.fillAmount += .05f;
 
 
         }
+
+
+        if (p1Progress.fillAmount < 1.0f)
+        {
+            p1Progress.color = new Color(1, 1, 1, 1);
+        }
         
-    
-        
+        if (p1Progress.fillAmount >= 1.0f)
+        {
+            p1Progress.color = new Color(0, 1, 1, 1);
+            p1Progress.fillAmount = 1.0f;
+        }
     }
 }

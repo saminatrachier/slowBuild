@@ -38,7 +38,7 @@ public class RaycastCheck2 : MonoBehaviour
     public Vector3 thisBlockPos;
     
     //Variable to check if the prefab has been deleted
-    public bool isDestroyed;
+    public static bool isDestroyed;
 
 
 
