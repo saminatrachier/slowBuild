@@ -15,6 +15,7 @@ public class ScoreText2 : MonoBehaviour
     void Start()
     {
         text2 = GetComponent<TextMeshProUGUI>();
+        Score2 = 0;
     }
 
     // Update is called once per frame
