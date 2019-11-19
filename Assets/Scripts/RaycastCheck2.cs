@@ -63,10 +63,11 @@ public class RaycastCheck2 : MonoBehaviour
         RaycastHit hit;
         float myMaxDistance = 5f;
 
-        
 
 
-        //Then we check what each raycast is hitting
+        if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
+        {
+            //Then we check what each raycast is hitting
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform.tag == "G")
         {
             //Reference to where the current opposing block is.
@@ -152,55 +153,114 @@ public class RaycastCheck2 : MonoBehaviour
 
             }
         }
+            
+            
+        }
+        else
+        {
+            Debug.Log("Raycast is returning null!");
+        }
+        
 
         ///Insertion 
-        if (Physics.Raycast(checkRay, out hit, myMaxDistance) && Input.GetKeyDown(KeyCode.Q))
+        if ( Input.GetKeyDown(KeyCode.Q))
         {
             if (DeletionMutation1.createG)
             {
-                Debug.Log("Place the Block In");
+               
                 //We need to get the opposing block to be deleted
-                Destroy(hit.transform.gameObject);
-                //then raycastcheck 2 creates a new block in its place.
-                //We should get the position of it.
-                Instantiate(prefabG, new Vector3(47, 2, 0), transform.rotation);
-                DeletionMutation1.createG = false;
+                if (hit.transform != null)
+                {
+                   Destroy(hit.transform.gameObject); 
+                }
+                    
+                    //then raycastcheck 2 creates a new block in its place.
+                    //We should get the position of it.
+                    StartCoroutine(PlaceBlockG());
+                    DeletionMutation1.createG = false;
+               
+       
             }
 
             if (DeletionMutation1.createC)
             {
-                Debug.Log("Place the Block In");
+                
                 //We need to get the opposing block to be deleted
-                Destroy(hit.transform.gameObject);
-                //then raycastcheck 2 creates a new block in its place.
-                Instantiate(prefabC, new Vector3(47, 2, 0), transform.rotation);
-                DeletionMutation1.createC = false;
+                if (hit.transform != null)
+                {
+                    Destroy(hit.transform.gameObject); 
+                }
+               
+                    //then raycastcheck 2 creates a new block in its place.
+                    StartCoroutine(PlaceBlockC());
+                    DeletionMutation1.createC = false;
+             
+               
             }
 
             if (DeletionMutation1.createA)
             {
-                Debug.Log("Place the Block In");
+         
                 //We need to get the opposing block to be deleted
-                Destroy(hit.transform.gameObject);
-                //then raycastcheck 2 creates a new block in its place.
-                Instantiate(prefabA, new Vector3(47, 2, 0), transform.rotation);
-                DeletionMutation1.createA = false;
-
-
-                
+                if (hit.transform != null)
+                {
+                    Destroy(hit.transform.gameObject); 
+                }
+              
+                    //then raycastcheck 2 creates a new block in its place.
+                    StartCoroutine(PlaceBlockA());
+                    DeletionMutation1.createA = false;
+       
+               
+     
             }
             
             if (DeletionMutation1.createT)
             {
-                Debug.Log("Place the Block In");
+            
                 //We need to get the opposing block to be deleted
-                Destroy(hit.transform.gameObject);
-                //then raycastcheck 2 creates a new block in its place.
-                Instantiate(prefabT, new Vector3(47, 2, 0), transform.rotation);
-                DeletionMutation1.createT = false;
+                if (hit.transform != null)
+                {
+                    Destroy(hit.transform.gameObject); 
+                }
+             
+                    //then raycastcheck 2 creates a new block in its place.
+                    StartCoroutine(PlaceBlockT());
+                    DeletionMutation1.createT = false;
+            
+               
             }
 
 
+        }
+
+        IEnumerator PlaceBlockG()
+        {
+            yield return new WaitForSeconds(0.1f);
+            Instantiate(prefabG, new Vector3(47, 2, 0), transform.rotation);
+            Debug.Log("Place the Block In");
+        }
+        
+        IEnumerator PlaceBlockC()
+        {
+            yield return new WaitForSeconds(0.1f);
+            Instantiate(prefabC, new Vector3(47, 2, 0), transform.rotation);
+            Debug.Log("Place the Block In");
+            
+        }
+        
+        IEnumerator PlaceBlockA()
+        {
+            yield return new WaitForSeconds(0.1f);
+            Instantiate(prefabA, new Vector3(47, 2, 0), transform.rotation);
+            Debug.Log("Place the Block In");
+        }
+        
+        IEnumerator PlaceBlockT()
+        {
+            yield return new WaitForSeconds(0.1f);
+            Instantiate(prefabT, new Vector3(47, 2, 0), transform.rotation);
+            Debug.Log("Place the Block In");
         }
     }
 }
