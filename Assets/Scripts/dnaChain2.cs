@@ -119,7 +119,7 @@ public class dnaChain2 : MonoBehaviour
 
     IEnumerator MoveUp()
     {
-        yield return  new WaitForSeconds(1.5f);
+        yield return  new WaitForSeconds(0.1f);
         this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
     }
 }
