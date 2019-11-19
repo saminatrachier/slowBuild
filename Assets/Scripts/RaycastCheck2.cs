@@ -31,11 +31,14 @@ public class RaycastCheck2 : MonoBehaviour
 
     public GameObject prefabT;
     
-    //Reference position of the opposing blocks
+    //Reference position of the  blocks
 
     public Vector3 opposingBlockPos;
 
-
+    public Vector3 thisBlockPos;
+    
+    //Variable to check if the prefab has been deleted
+    public bool isDestroyed;
 
 
 
@@ -47,7 +50,7 @@ public class RaycastCheck2 : MonoBehaviour
         gotT = false;
 
 
-
+        isDestroyed = false;
 
 
     }
@@ -63,7 +66,7 @@ public class RaycastCheck2 : MonoBehaviour
         RaycastHit hit;
         float myMaxDistance = 5f;
 
-
+        thisBlockPos = this.transform.position;
 
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
         {
@@ -78,7 +81,7 @@ public class RaycastCheck2 : MonoBehaviour
             Debug.Log("The Current Enemy Block is a G");
 
             //Now we gotta check if we can steal DNA. This is handled in DeletionMutation1
-            if (DeletionMutation1.stealDNA)
+            if (DeletionMutation1.stealDNA && isDestroyed == false)
             {
                 //Another check, but we got to make sure the player whose being stolen from made an input first before we still. This is just to prevent 
                 //the opposing block from being deleted before the player has a chance to at least score a point.
@@ -101,7 +104,7 @@ public class RaycastCheck2 : MonoBehaviour
             //This helps when replacing the block later
             opposingBlockPos = hit.transform.position;
             
-            if (DeletionMutation1.stealDNA)
+            if (DeletionMutation1.stealDNA && isDestroyed == false)
             {
 
                 if (dnaChain2.inputMade)
@@ -114,7 +117,7 @@ public class RaycastCheck2 : MonoBehaviour
 
             }
         }
-        else if (hit.transform.tag == "A")
+        else if (hit.transform.tag == "A" && isDestroyed == false)
         {
             
             //Reference to where the current opposing block is.
@@ -134,7 +137,7 @@ public class RaycastCheck2 : MonoBehaviour
 
             }
         }
-        else if (hit.transform.tag == "T")
+        else if (hit.transform.tag == "T" && isDestroyed == false)
         {
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
@@ -167,7 +170,7 @@ public class RaycastCheck2 : MonoBehaviour
         {
             if (DeletionMutation1.createG)
             {
-               
+                isDestroyed = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -184,7 +187,7 @@ public class RaycastCheck2 : MonoBehaviour
 
             if (DeletionMutation1.createC)
             {
-                
+                isDestroyed = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -200,7 +203,7 @@ public class RaycastCheck2 : MonoBehaviour
 
             if (DeletionMutation1.createA)
             {
-         
+                isDestroyed = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -218,6 +221,7 @@ public class RaycastCheck2 : MonoBehaviour
             if (DeletionMutation1.createT)
             {
             
+                isDestroyed = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -237,14 +241,14 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockG()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabG, new Vector3(47, 2, 0), transform.rotation);
+            Instantiate(prefabG, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
         
         IEnumerator PlaceBlockC()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabC, new Vector3(47, 2, 0), transform.rotation);
+            Instantiate(prefabC, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
             
         }
@@ -252,14 +256,14 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockA()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabA, new Vector3(47, 2, 0), transform.rotation);
+            Instantiate(prefabA, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
         
         IEnumerator PlaceBlockT()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabT, new Vector3(47, 2, 0), transform.rotation);
+            Instantiate(prefabT, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
     }
