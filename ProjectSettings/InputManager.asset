@@ -35,7 +35,23 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 9
+    axis: 8
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: P1 Vertical MAC
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.2
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 11
     joyNum: 1
   - serializedVersion: 3
     m_Name: P2 Vertical
@@ -51,7 +67,23 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
-    axis: 9
+    axis: 8
+    joyNum: 2
+  - serializedVersion: 3
+    m_Name: P2 Vertical MAC
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1
+    dead: 0.2
+    sensitivity: 1
+    snap: 1
+    invert: 0
+    type: 2
+    axis: 11
     joyNum: 2
   - serializedVersion: 3
     m_Name: Fire1
