@@ -18,6 +18,9 @@ public class RaycastCheck2 : MonoBehaviour
     public static bool gotT;
 
     private bool blockStolen;
+    
+    private bool deleteThree;
+    private int deleteCounter;
 
     
     [Header("Prefabs Player 2")]
@@ -51,6 +54,8 @@ public class RaycastCheck2 : MonoBehaviour
 
 
         isDestroyed = false;
+        deleteCounter = 0;
+        deleteThree = false;
 
 
     }
@@ -64,7 +69,7 @@ public class RaycastCheck2 : MonoBehaviour
         RaycastHit hit;
         RaycastHit downHit;
         float myMaxDistance = 5f;
-        float myMaxDistance2 = 2000f;
+        float myMaxDistance2 = 2f;
 
         thisBlockPos = this.transform.position;
 
@@ -165,10 +170,23 @@ public class RaycastCheck2 : MonoBehaviour
             Debug.Log("Raycast is returning null!");
         }
         
+       // if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2))
+        //{
+         //   Destroy(downHit.transform.gameObject); 
+        //}
         //checking if ray goes down
-        if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
-            Destroy(downHit.transform.gameObject); 
+            deleteThree = true;
+        }
+
+        if (deleteThree == true && deleteCounter < 3)
+        {
+            deleteCounter++;
+            Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+             Destroy(downHit.transform.gameObject); 
+
+           //deleteCounter++;
         }
 
         ///Insertion 

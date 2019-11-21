@@ -27,6 +27,9 @@ public class dnaChain2 : MonoBehaviour
     public float timeLeft;
     public float maxTime = 60f;
     
+    private bool deleteThree;
+    private int deleteCounter;
+    
     //These variables check if input has been made. This is important for the Deletion Mechanic
     //As I need to check if a block has spawn FIRST before deleting the opposing one.
     //This is to fix a bug in where the block is stolen before the player has a chance to input anything, and will thus always get a mutation
@@ -36,6 +39,8 @@ public class dnaChain2 : MonoBehaviour
 
         timeLeft = maxTime;
         inputMade = false;
+        deleteCounter = 0;
+        deleteThree = false;
     }
 
     // Update is called once per frame
@@ -106,6 +111,12 @@ public class dnaChain2 : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Y))
         {
+            deleteThree = true;
+        }
+
+        if (deleteThree == true && deleteCounter < 3)
+        {
+            deleteCounter++;
             StartCoroutine(MoveDown());
         }
         
