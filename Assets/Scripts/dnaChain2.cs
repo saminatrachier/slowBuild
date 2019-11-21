@@ -60,7 +60,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += .01f;
+            p2Progress.fillAmount += 0.5f;
             inputMade = true;
             StartCoroutine(ResetBool());
             
@@ -70,7 +70,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += .01f;
+            p2Progress.fillAmount += 0.5f;
             inputMade = true;
             StartCoroutine(ResetBool());
             
@@ -81,7 +81,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += .01f;
+            p2Progress.fillAmount += 0.5f;
             inputMade = true;
             StartCoroutine(ResetBool());
           
@@ -92,7 +92,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += .01f;
+            p2Progress.fillAmount += 0.5f;
             inputMade = true;
             StartCoroutine(ResetBool());
         }
@@ -118,6 +118,17 @@ public class dnaChain2 : MonoBehaviour
         {
             deleteCounter++;
             StartCoroutine(MoveDown());
+        }
+        
+        if (p2Progress.fillAmount < 1.0f)
+        {
+            p2Progress.color = new Color(1, 1, 1, 1);
+        }
+        
+        if (p2Progress.fillAmount >= 1.0f)
+        {
+            p2Progress.color = new Color(0, 1, 1, 1);
+            p2Progress.fillAmount = 1.0f;
         }
         
     }
