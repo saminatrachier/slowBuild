@@ -24,6 +24,7 @@ public class dnaChain2 : MonoBehaviour
     
     //time left for player objects to appear
     public Image timer;
+    public float time;
     public float timeLeft;
     public float maxTime = 60f;
     
@@ -41,6 +42,7 @@ public class dnaChain2 : MonoBehaviour
         inputMade = false;
         deleteCounter = 0;
         deleteThree = false;
+        time = 0.2f;
     }
 
     // Update is called once per frame
@@ -116,8 +118,19 @@ public class dnaChain2 : MonoBehaviour
 
         if (deleteThree == true && deleteCounter < 3)
         {
-            deleteCounter++;
-            StartCoroutine(MoveDown());
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject); 
+                
+                time = 0.2f;
+                deleteCounter++;
+            }
         }
         
         if (p2Progress.fillAmount < 1.0f)
