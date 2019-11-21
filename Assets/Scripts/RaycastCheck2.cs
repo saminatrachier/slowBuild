@@ -166,9 +166,9 @@ public class RaycastCheck2 : MonoBehaviour
         }
         
         //checking if ray goes down
-        if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2) && downHit.transform.tag == "G")
+        if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2))
         {
-            Debug.Log("it G");
+            Destroy(downHit.transform.gameObject); 
         }
 
         ///Insertion 
