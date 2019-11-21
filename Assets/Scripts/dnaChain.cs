@@ -62,8 +62,6 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabT, transform.position, transform.rotation);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
             p1Progress.fillAmount += .05f;
-
-
         }
 
 

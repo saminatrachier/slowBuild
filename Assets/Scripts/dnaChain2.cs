@@ -90,10 +90,8 @@ public class dnaChain2 : MonoBehaviour
             p2Progress.fillAmount += .01f;
             inputMade = true;
             StartCoroutine(ResetBool());
-         
-
-
         }
+        
         
         if (timeLeft > 0 && cameraCinematic.startCinematic == false)
         {
@@ -106,7 +104,10 @@ public class dnaChain2 : MonoBehaviour
             SceneManager.LoadScene (2);
         }
         
-    
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            StartCoroutine(MoveDown());
+        }
         
     }
 
@@ -121,5 +122,11 @@ public class dnaChain2 : MonoBehaviour
     {
         yield return  new WaitForSeconds(0.1f);
         this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+    }
+    
+    IEnumerator MoveDown()
+    {
+        yield return  new WaitForSeconds(0.1f);
+        this.GetComponent<Transform>().Translate(new Vector3(0, -2f));
     }
 }

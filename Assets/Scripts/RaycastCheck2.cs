@@ -58,16 +58,17 @@ public class RaycastCheck2 : MonoBehaviour
 
     void Update()
     {
-        
-       
-
         //First, we create a raycast that this object will make to check what the current opposing block is.
         Ray checkRay = new Ray(transform.position, -transform.right);
+        Ray checkRay2 = new Ray(transform.position, -transform.up);
         RaycastHit hit;
+        RaycastHit downHit;
         float myMaxDistance = 5f;
+        float myMaxDistance2 = 2000f;
 
         thisBlockPos = this.transform.position;
 
+        Debug.DrawRay(transform.position, -transform.up, Color.magenta);
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
         {
             //Then we check what each raycast is hitting
@@ -164,6 +165,11 @@ public class RaycastCheck2 : MonoBehaviour
             Debug.Log("Raycast is returning null!");
         }
         
+        //checking if ray goes down
+        if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2) && downHit.transform.tag == "G")
+        {
+            Debug.Log("it G");
+        }
 
         ///Insertion 
         if ( Input.GetKeyDown(KeyCode.Q))
