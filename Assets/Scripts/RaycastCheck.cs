@@ -2,26 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//USAGE: This script goes on the Raycast 2 Gameobject. This block will always check
-//The current Enemy DNA Block.
-//PURPOSE: The raycast from this block will grab the information of the opposing block for the
-//steal mechanic. When the steal mechanic is activated, it will delete the prefab away.
-public class RaycastCheck2 : MonoBehaviour
+public class RaycastCheck : MonoBehaviour
 {
     [Header("Got Variables")]
-    public static bool gotG;
+    public static bool gotG2;
 
-    public static bool gotC;
+    public static bool gotC2;
 
-    public static bool gotA;
+    public static bool gotA2;
 
-    public static bool gotT;
+    public static bool gotT2;
 
     private bool blockStolen;
 
     
-    [Header("Prefabs Player 2")]
-    //game objects that reference DNA Chain 2 game objects
+    [Header("Prefabs Player")]
+    //game objects that reference DNA Chain game objects
 
     public GameObject prefabG;
 
@@ -31,42 +27,40 @@ public class RaycastCheck2 : MonoBehaviour
 
     public GameObject prefabT;
     
-    //Reference position of the  blocks
+    //Reference position of the blocks
 
-    public Vector3 opposingBlockPos;
+    public Vector3 opposingBlockPos2;
 
-    public Vector3 thisBlockPos;
+    public Vector3 thisBlockPos2;
     
     //Variable to check if the prefab has been deleted
-    public static bool isDestroyed;
-
-
+    public static bool isDestroyed2;
 
     void Start()
     {
-        gotG = false;
-        gotC = false;
-        gotA = false;
-        gotT = false;
+        gotG2 = false;
+        gotC2 = false;
+        gotA2 = false;
+        gotT2 = false;
 
 
-        isDestroyed = false;
-
+        isDestroyed2 = false;
 
     }
 
-
+    // Update is called once per frame
     void Update()
     {
-        //First, we create a raycast that this object will make to check what the current opposing block is.
+         //First, we create a raycast that this object will make to check what the current opposing block is.
         Ray checkRay = new Ray(transform.position, -transform.right);
+        //This raycast checks whats below
         Ray checkRay2 = new Ray(transform.position, -transform.up);
         RaycastHit hit;
         RaycastHit downHit;
         float myMaxDistance = 5f;
         float myMaxDistance2 = 2000f;
 
-        thisBlockPos = this.transform.position;
+        thisBlockPos2 = this.transform.position;
 
         Debug.DrawRay(transform.position, -transform.up, Color.magenta);
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
@@ -76,23 +70,23 @@ public class RaycastCheck2 : MonoBehaviour
         {
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
-            opposingBlockPos = hit.transform.position;
+            opposingBlockPos2 = hit.transform.position;
             
             //The tags help us tell which is which.
-            Debug.Log("The Current Enemy Block is a G");
+        
 
             //Now we gotta check if we can steal DNA. This is handled in DeletionMutation1
-            if (DeletionMutation1.stealDNA && isDestroyed == false)
+            if (DeletionMutation2.stealDNA2 && isDestroyed2 == false)
             {
                 //Another check, but we got to make sure the player whose being stolen from made an input first before we still. This is just to prevent 
                 //the opposing block from being deleted before the player has a chance to at least score a point.
                 //For now just makes sure this stays.
-                if (dnaChain2.inputMade)
+                if (dnaChain.inputMade2)
                 {
-                    Debug.Log("Steal the G");
+                    Debug.Log("Steal the G 2");
                     Destroy(hit.transform.gameObject);
-                    DeletionMutation1.stealDNA = false;
-                    gotG = true;
+                    DeletionMutation2.stealDNA2 = false;
+                    gotG2 = true;
                 }
 
             }
@@ -103,56 +97,56 @@ public class RaycastCheck2 : MonoBehaviour
             
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
-            opposingBlockPos = hit.transform.position;
+            opposingBlockPos2 = hit.transform.position;
             
-            if (DeletionMutation1.stealDNA && isDestroyed == false)
+            if (DeletionMutation2.stealDNA2 && isDestroyed2 == false)
             {
 
-                if (dnaChain2.inputMade)
+                if (dnaChain.inputMade2)
                 {
-                    Debug.Log("Steal the C");
+                    Debug.Log("Steal the C 2");
                     Destroy(hit.transform.gameObject);
-                    DeletionMutation1.stealDNA = false;
-                    gotC = true;
+                    DeletionMutation2.stealDNA2 = false;
+                    gotC2 = true;
                 }
 
             }
         }
-        else if (hit.transform.tag == "A" && isDestroyed == false)
+        else if (hit.transform.tag == "A" && isDestroyed2 == false)
         {
             
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
-            opposingBlockPos = hit.transform.position;
+            opposingBlockPos2 = hit.transform.position;
             
-            if (DeletionMutation1.stealDNA)
+            if (DeletionMutation2.stealDNA2)
             {
 
-                if (dnaChain2.inputMade)
+                if (dnaChain.inputMade2)
                 {
-                    Debug.Log("Steal the A");
+                    Debug.Log("Steal the A 2");
                     Destroy(hit.transform.gameObject);
-                    DeletionMutation1.stealDNA = false;
-                    gotA = true;
+                    DeletionMutation2.stealDNA2 = false;
+                    gotA2 = true;
                 }
 
             }
         }
-        else if (hit.transform.tag == "T" && isDestroyed == false)
+        else if (hit.transform.tag == "T" && isDestroyed2 == false)
         {
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
-            opposingBlockPos = hit.transform.position;
+            opposingBlockPos2 = hit.transform.position;
             
-            if (DeletionMutation1.stealDNA)
+            if (DeletionMutation2.stealDNA2)
             {
 
-                if (dnaChain2.inputMade)
+                if (dnaChain.inputMade2)
                 {
-                    Debug.Log("Steal the T");
+                    Debug.Log("Steal the T 2");
                     Destroy(hit.transform.gameObject);
-                    DeletionMutation1.stealDNA = false;
-                    gotT = true;
+                    DeletionMutation2.stealDNA2 = false;
+                    gotT2 = true;
                 }
 
             }
@@ -172,11 +166,11 @@ public class RaycastCheck2 : MonoBehaviour
         }
 
         ///Insertion 
-        if ( Input.GetKeyDown(KeyCode.Q))
+        if ( Input.GetKeyDown(KeyCode.P))
         {
-            if (DeletionMutation1.createG)
+            if (DeletionMutation2.createG2)
             {
-                isDestroyed = true;
+                isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -186,14 +180,14 @@ public class RaycastCheck2 : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     //We should get the position of it.
                     StartCoroutine(PlaceBlockG());
-                    DeletionMutation1.createG = false;
+                    DeletionMutation2.createG2 = false;
                
        
             }
 
-            if (DeletionMutation1.createC)
+            if (DeletionMutation2.createC2)
             {
-                isDestroyed = true;
+                isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -202,14 +196,14 @@ public class RaycastCheck2 : MonoBehaviour
                
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockC());
-                    DeletionMutation1.createC = false;
+                    DeletionMutation2.createC2 = false;
              
                
             }
 
-            if (DeletionMutation1.createA)
+            if (DeletionMutation2.createA2)
             {
-                isDestroyed = true;
+                isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -218,16 +212,16 @@ public class RaycastCheck2 : MonoBehaviour
               
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockA());
-                    DeletionMutation1.createA = false;
+                    DeletionMutation2.createA2 = false;
        
                
      
             }
             
-            if (DeletionMutation1.createT)
+            if (DeletionMutation2.createT2)
             {
             
-                isDestroyed = true;
+                isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
                 {
@@ -236,7 +230,7 @@ public class RaycastCheck2 : MonoBehaviour
              
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockT());
-                    DeletionMutation1.createT = false;
+                    DeletionMutation2.createT2 = false;
             
                
             }
@@ -247,14 +241,14 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockG()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabG, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabG, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
         
         IEnumerator PlaceBlockC()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabC, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabC, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
             
         }
@@ -262,14 +256,14 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockA()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabA, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabA, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
         
         IEnumerator PlaceBlockT()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabT, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabT, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
         }
     }
