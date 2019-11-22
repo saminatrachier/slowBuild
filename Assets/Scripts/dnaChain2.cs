@@ -111,7 +111,7 @@ public class dnaChain2 : MonoBehaviour
             SceneManager.LoadScene (2);
         }
         
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             deleteThree = true;
         }
@@ -127,7 +127,7 @@ public class dnaChain2 : MonoBehaviour
                 StartCoroutine(MoveDown());
                 Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
                 Destroy(downHit.transform.gameObject); 
-                
+                ScoreText2.Score2 -= 1;
                 time = 0.2f;
                 deleteCounter++;
             }

@@ -164,16 +164,7 @@ public class RaycastCheck2 : MonoBehaviour
         {
             Debug.Log("Raycast is returning null!");
         }
-        
-        //checking if ray goes down
 
-//        if (Input.GetKeyDown(KeyCode.Y))
-  //      {
-    //        if (Physics.Raycast(checkRay2, out downHit, myMaxDistance2))
-      //      {
-        //        Destroy(downHit.transform.gameObject); 
-          //  }
-        //}
 
         ///Insertion 
         if ( Input.GetKeyDown(KeyCode.Q))

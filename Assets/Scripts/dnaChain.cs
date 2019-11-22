@@ -27,9 +27,15 @@ public class dnaChain : MonoBehaviour
     //As I need to check if a block has spawn FIRST before deleting the opposing one.
     //This is to fix a bug in where the block is stolen before the player has a chance to input anything, and will thus always get a mutation
     public static bool inputMade2;
+    private bool deleteThree;
+    private int deleteCounter;
+    public float time;
     void Start()
     {
         inputMade2 = false;
+        deleteCounter = 0;
+        deleteThree = false;
+        time = 0.2f;
     }
 
     // Update is called once per frame
@@ -82,6 +88,27 @@ public class dnaChain : MonoBehaviour
             inputMade2 = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            deleteThree = true;
+        }
+
+        if (deleteThree == true && deleteCounter < 3)
+        {
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject); 
+                ScoreText1.Score -= 1;
+                time = 0.2f;
+                deleteCounter++;
+            }
+        }
 
         if (p1Progress.fillAmount < 1.0f)
         {
@@ -105,6 +132,12 @@ public class dnaChain : MonoBehaviour
         {
             yield return  new WaitForSeconds(0.1f);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+        }
+        
+        IEnumerator MoveDown()
+        {
+            yield return  new WaitForSeconds(0.1f);
+            this.GetComponent<Transform>().Translate(new Vector3(0, -2f));
         }
 
     }
