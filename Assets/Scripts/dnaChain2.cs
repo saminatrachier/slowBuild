@@ -48,15 +48,6 @@ public class dnaChain2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputMade)
-        {
-            Debug.Log("Input has been made by Player 2. You are now able to steal, Player 1");
-        }
-        else
-        {
-            Debug.Log("Slow your roll, Player 1. You can't steal yet because there is no input.");
-        }
-        
         
         if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetButtonDown("P2 Left"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
@@ -111,9 +102,11 @@ public class dnaChain2 : MonoBehaviour
             SceneManager.LoadScene (2);
         }
         
-        if (Input.GetKeyDown(KeyCode.R))
+        //Helicase Mechanic
+        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f) 
         {
             deleteThree = true;
+            p2Progress.fillAmount = 0f;
         }
 
         if (deleteThree == true && deleteCounter < 3)

@@ -30,6 +30,8 @@ public class dnaChain : MonoBehaviour
     private bool deleteThree;
     private int deleteCounter;
     public float time;
+    
+   
     void Start()
     {
         inputMade2 = false;
@@ -41,14 +43,6 @@ public class dnaChain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputMade2)
-        {
-            Debug.Log("Input has been made by Player 1. You are now able to steal, Player 2");
-        }
-        else
-        {
-            Debug.Log("Slow your roll, Player 2. You can't steal yet because there is no input.");
-        }
         
     //player 1 inputs/controller
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left")) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -59,6 +53,7 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(ResetBool2());
             inputMade2 = true;
 
+            FindObjectOfType<AudioManager>().Play("Correct");
         }
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
@@ -67,6 +62,8 @@ public class dnaChain : MonoBehaviour
             p1Progress.fillAmount += .05f;
             inputMade2 = true;
 
+            
+            FindObjectOfType<AudioManager>().Play("Correct");
 
         }
         if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -76,6 +73,8 @@ public class dnaChain : MonoBehaviour
             p1Progress.fillAmount += .05f;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
+            
+            FindObjectOfType<AudioManager>().Play("Correct");
 
 
         }
@@ -86,11 +85,16 @@ public class dnaChain : MonoBehaviour
             p1Progress.fillAmount += .05f;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
+            
+            FindObjectOfType<AudioManager>().Play("Correct");
         }
-
-        if (Input.GetKeyDown(KeyCode.Y))
+        
+        
+        //Helicase Mechanic
+        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount >= 1f) 
         {
             deleteThree = true;
+            p1Progress.fillAmount = 0f;
         }
 
         if (deleteThree == true && deleteCounter < 3)

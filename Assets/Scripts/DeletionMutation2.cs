@@ -42,7 +42,7 @@ public class DeletionMutation2 : MonoBehaviour
     void Update()
     {
         //Temporary debug key that will simulate getting the bar filled up 
-        if (dnaChainScript2.p2Progress.fillAmount == 1.0f)
+        if (dnaChainScript2.p2Progress.fillAmount >= 1.0f)
         {
             enableSteal2 = true;
             RaycastCheck2.isDestroyed = false;

@@ -20,21 +20,27 @@ public class Mutation1 : MonoBehaviour
     public static int Mutation = 0;
     public GameObject gameOverText;
 
+    public bool playSoundOnce;
+
     // Start is called before the first frame update
     void Start()
     {
         cam1 = GetComponent<Camera>();
         gameOverText.SetActive(false);
         Mutation = 0;
+        playSoundOnce = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        
         if (Mutation == 1)
         {
             cam1.backgroundColor =color1;
+
         }
 
         if (Mutation == 2)
@@ -46,6 +52,7 @@ public class Mutation1 : MonoBehaviour
         {
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
+
             if (Mutation2.Mutation >= 3)
             {
                 SceneManager.LoadScene (2);
