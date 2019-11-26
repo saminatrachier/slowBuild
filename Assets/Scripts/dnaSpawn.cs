@@ -18,7 +18,7 @@ public class dnaSpawn : MonoBehaviour
 
     public GameObject PrefabG;
 
-    public int maxDNACount = 200; //how many DNA should we be able to make?
+    public int maxDNACount = 50; //how many DNA should we be able to make?
     List<GameObject> myDNAList = new List<GameObject>(); //list of all the DNA that spawns
 
    
@@ -26,7 +26,7 @@ public class dnaSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int y = 0; y < 200; y++)
+        for (int y = 0; y < 50; y++)
         { 
             //position of the prefabs
             Vector3 spawnPosition = new Vector3(0,y*2, 0);
