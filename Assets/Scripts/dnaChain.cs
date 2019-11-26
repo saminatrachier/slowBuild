@@ -30,15 +30,20 @@ public class dnaChain : MonoBehaviour
     public static bool inputMade2;
     private bool deleteThree;
     private int deleteCounter;
+    private int deleteCounter2;
     public float time;
+
+    public int pressCount;
     
    
     void Start()
     {
         inputMade2 = false;
         deleteCounter = 0;
+        deleteCounter2 = 0;
         deleteThree = false;
         time = 0.2f;
+        pressCount = 0;
     }
 
     // Update is called once per frame
@@ -52,6 +57,7 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
             StartCoroutine(ResetBool2());
+            pressCount += 1;
             inputMade2 = true;
 
             FindObjectOfType<AudioManager>().Play("Correct");
@@ -61,6 +67,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            pressCount += 1;
             inputMade2 = true;
 
             
@@ -72,6 +79,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
@@ -84,6 +92,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
@@ -117,8 +126,24 @@ public class dnaChain : MonoBehaviour
             }
         }
 
-        
-        
+        if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
+        {
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject);
+                ScoreText1.Score = 0;
+                time = 0.02f;
+                deleteCounter2++;
+            }
+        }
+
+
         if (ScoreText1.Score == 50)
         {
             SceneManager.LoadScene (2);

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Mutation2 : MonoBehaviour
 
 {
+    public GameObject player;
     public Color color3 = new Color(255, 0, 0,255); //bright red
 
     public Color color2 = new Color(255, 85, 85,255);//medium red
@@ -52,13 +53,12 @@ public class Mutation2 : MonoBehaviour
             cam2.backgroundColor = color3;
             gameOverText.SetActive(true);
 
-            time -= Time.deltaTime;
-            if (time <= 0)
+            cam2.transform.position = Vector3.Lerp(cam2.transform.position, player.transform.position, 2f * Time.deltaTime);
+            if (cam2.transform.position.y <= 1f)
             {
                 cam2.backgroundColor = default1;
-                gameOverText.SetActive(false);
+                gameOverText.SetActive(false); 
                 Mutation = 0;
-                
             }
 
         }

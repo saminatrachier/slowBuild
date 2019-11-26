@@ -30,6 +30,8 @@ public class dnaChain2 : MonoBehaviour
     
     private bool deleteThree;
     private int deleteCounter;
+    private int deleteCounter2;
+    public int pressCount;
     
     //These variables check if input has been made. This is important for the Deletion Mechanic
     //As I need to check if a block has spawn FIRST before deleting the opposing one.
@@ -41,6 +43,7 @@ public class dnaChain2 : MonoBehaviour
         timeLeft = maxTime;
         inputMade = false;
         deleteCounter = 0;
+        deleteCounter2 = 0;
         deleteThree = false;
         time = 0.2f;
     }
@@ -55,6 +58,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
             
 
@@ -65,6 +69,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
             
 
@@ -76,6 +81,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
           
 
@@ -87,6 +93,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
         }
         
@@ -118,6 +125,23 @@ public class dnaChain2 : MonoBehaviour
                 time = 0.2f;
                 deleteThree = false;
                 deleteCounter++;
+            }
+        }
+        
+        if (Mutation2.Mutation == 3 && deleteCounter2 < pressCount)
+        {
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject);
+                ScoreText2.Score2 = 0;
+                time = 0.02f;
+                deleteCounter2++;
             }
         }
         

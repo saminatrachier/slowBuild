@@ -817,7 +817,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -848,9 +848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e8560306be38e4dbaf18f81a347800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2098680296}
   color3: {r: 255, g: 0, b: 0, a: 255}
   color2: {r: 1, g: 0.3726415, b: 0.3726415, a: 255}
   color1: {r: 1, g: 1, b: 1, a: 255}
+  default1: {r: 49, g: 77, b: 121, a: 255}
   cam1: {fileID: 534669904}
   time: 0
   gameOverText: {fileID: 669187250}
@@ -1668,12 +1670,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a61c7efd836f945ad71cc16002c84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1347641585}
   color3: {r: 255, g: 0, b: 0, a: 255}
   color2: {r: 1, g: 0.37254903, b: 0.37254903, a: 255}
   color1: {r: 340.44495, g: 237.06377, b: 237.06377, a: 255}
+  default1: {r: 49, g: 77, b: 121, a: 0}
   cam2: {fileID: 739129656}
   gameOverText: {fileID: 777302671}
   mutation: {fileID: 534669902}
+  time: 0
 --- !u!114 &739129658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1873,6 +1878,7 @@ MonoBehaviour:
   p1Progress: {fileID: 0}
   timeLeft: 0
   time: 0
+  pressCount: 0
 --- !u!1 &808251640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +1997,7 @@ MonoBehaviour:
   p1Progress: {fileID: 0}
   timeLeft: 0
   time: 0
+  pressCount: 0
 --- !u!1 &1245639095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,6 +2351,7 @@ MonoBehaviour:
   p1Progress: {fileID: 0}
   timeLeft: 0
   time: 0
+  pressCount: 0
 --- !u!1 &1574186664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2421,7 @@ MonoBehaviour:
   time: 0
   timeLeft: 0
   maxTime: 60
+  pressCount: 0
 --- !u!1 &1651298879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,6 +2770,7 @@ MonoBehaviour:
   p1Progress: {fileID: 243698960}
   timeLeft: 0.25
   time: 0
+  pressCount: 0
 --- !u!1 &1748263231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,6 +3583,7 @@ MonoBehaviour:
   p1Progress: {fileID: 0}
   timeLeft: 0
   time: 0
+  pressCount: 0
 --- !u!1001 &1977221994191426850
 PrefabInstance:
   m_ObjectHideFlags: 0

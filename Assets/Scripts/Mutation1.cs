@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 //purpose: Player 1's visual mutation tracker (screen background color)
 public class Mutation1 : MonoBehaviour
 {
+    public GameObject player;
     public Color color3 = new Color(255, 0, 0,255); //bright red
 
     public Color color2 = new Color(255, 85, 85,255);//medium red
@@ -23,7 +24,6 @@ public class Mutation1 : MonoBehaviour
     public static int Mutation = 0;
     public float time;
     public GameObject gameOverText;
-
     public bool playSoundOnce;
 
     // Start is called before the first frame update
@@ -33,8 +33,8 @@ public class Mutation1 : MonoBehaviour
         gameOverText.SetActive(false);
         Mutation = 0;
         playSoundOnce = false;
-        time = 2f;
-        
+        time = 1f;
+      //  endMarker = new Vector3(1.4f, 1f, -10f);
 
     }
 
@@ -59,11 +59,11 @@ public class Mutation1 : MonoBehaviour
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
 
-                time -= Time.deltaTime;
-                if (time <= 0)
+            cam1.transform.position = Vector3.Lerp(cam1.transform.position, player.transform.position, 2f * Time.deltaTime);
+                if (cam1.transform.position.y <= 1f)
                 {
                     cam1.backgroundColor = default1;
-                    gameOverText.SetActive(false);
+                    gameOverText.SetActive(false); 
                     Mutation = 0;
                 }
 
