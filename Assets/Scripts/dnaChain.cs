@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
@@ -113,7 +114,11 @@ public class dnaChain : MonoBehaviour
                 deleteCounter++;
             }
         }
-
+        
+        if (ScoreText1.Score == 50)
+        {
+            SceneManager.LoadScene (2);
+        }
         if (p1Progress.fillAmount < 1.0f)
         {
             p1Progress.color = new Color(1, 1, 1, 1);

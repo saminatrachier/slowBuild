@@ -91,14 +91,8 @@ public class dnaChain2 : MonoBehaviour
         }
         
         
-        if (timeLeft > 0 && cameraCinematic.startCinematic == false)
+        if (ScoreText2.Score2 == 50)
         {
-          //  timeLeft -= Time.deltaTime;
-           // timer.fillAmount = timeLeft / maxTime;
-        }
-        else if (cameraCinematic.startCinematic == false)
-        {
-            Time.timeScale = 0;
             SceneManager.LoadScene (2);
         }
         
