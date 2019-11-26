@@ -93,8 +93,8 @@ public class dnaChain2 : MonoBehaviour
         
         if (timeLeft > 0 && cameraCinematic.startCinematic == false)
         {
-            timeLeft -= Time.deltaTime;
-            timer.fillAmount = timeLeft / maxTime;
+          //  timeLeft -= Time.deltaTime;
+           // timer.fillAmount = timeLeft / maxTime;
         }
         else if (cameraCinematic.startCinematic == false)
         {
