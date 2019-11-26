@@ -93,11 +93,6 @@ public class dnaChain2 : MonoBehaviour
         
         if (ScoreText2.Score2 == 50)
         {
-
-        }
-        else if (cameraCinematic.startCinematic == false)
-        {
-            Time.timeScale = 0;
             SceneManager.LoadScene (2);
         }
         
