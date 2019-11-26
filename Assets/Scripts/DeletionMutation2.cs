@@ -52,7 +52,7 @@ public class DeletionMutation2 : MonoBehaviour
 
         if (enableSteal2 == true)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
             {
                 dnaChainScript2.p2Progress.fillAmount = 0.0f;
                 

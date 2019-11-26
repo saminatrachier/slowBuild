@@ -91,7 +91,7 @@ public class dnaChain : MonoBehaviour
         
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount >= 1f) 
+        if (Input.GetKeyDown(KeyCode.Y) || (Input.GetButtonDown("P1 Heliocase") && p1Progress.fillAmount >= 1f) )
         {
             deleteThree = true;
             p1Progress.fillAmount = 0f;

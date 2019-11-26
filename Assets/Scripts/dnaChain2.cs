@@ -53,7 +53,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 0.05f;
             inputMade = true;
             StartCoroutine(ResetBool());
             
@@ -63,7 +63,7 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 0.05f;
             inputMade = true;
             StartCoroutine(ResetBool());
             
@@ -103,7 +103,7 @@ public class dnaChain2 : MonoBehaviour
         }
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f) 
+        if (Input.GetKeyDown(KeyCode.R) || (Input.GetButtonDown("P1 Heliocase")&& p2Progress.fillAmount >= 1f) )
         {
             deleteThree = true;
             p2Progress.fillAmount = 0f;

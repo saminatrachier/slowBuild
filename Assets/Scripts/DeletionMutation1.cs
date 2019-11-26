@@ -63,7 +63,7 @@ public class DeletionMutation1 : MonoBehaviour
 
         if (enableSteal == true)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) || (Input.GetButtonDown("P1 Delete")))
             {
                 dnaChainScript.p1Progress.fillAmount = 0.0f;
                 
