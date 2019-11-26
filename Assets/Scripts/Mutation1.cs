@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 
@@ -14,10 +15,13 @@ public class Mutation1 : MonoBehaviour
     public Color color2 = new Color(255, 85, 85,255);//medium red
 
     public Color color1 = new Color(255, 185, 185, 255); //light red
+    
+    public Color default1 = new Color(49, 77, 121, 0);
 
-    public Camera cam1;
+    public Camera cam1;    
 
     public static int Mutation = 0;
+    public float time;
     public GameObject gameOverText;
 
     public bool playSoundOnce;
@@ -29,6 +33,8 @@ public class Mutation1 : MonoBehaviour
         gameOverText.SetActive(false);
         Mutation = 0;
         playSoundOnce = false;
+        time = 2f;
+        
 
     }
 
@@ -53,10 +59,13 @@ public class Mutation1 : MonoBehaviour
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
 
-            if (Mutation2.Mutation >= 3)
-            {
-                SceneManager.LoadScene (2);
-            }
+                time -= Time.deltaTime;
+                if (time <= 0)
+                {
+                    cam1.backgroundColor = default1;
+                    gameOverText.SetActive(false);
+                    Mutation = 0;
+                }
 
         }
     }
