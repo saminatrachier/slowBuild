@@ -92,14 +92,15 @@ public class dnaChain : MonoBehaviour
         
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.Y) || (Input.GetButtonDown("P2 Heliocase") && p1Progress.fillAmount == 1f) )
+        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount == 1f) 
         {
             deleteThree = true;
             p1Progress.fillAmount = 0f;
         }
-
+        
         if (deleteThree == true && deleteCounter < 3)
         {
+           
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);
@@ -111,9 +112,12 @@ public class dnaChain : MonoBehaviour
                 Destroy(downHit.transform.gameObject); 
                 ScoreText1.Score -= 1;
                 time = 0.2f;
+                deleteThree = false;
                 deleteCounter++;
             }
         }
+
+        
         
         if (ScoreText1.Score == 50)
         {

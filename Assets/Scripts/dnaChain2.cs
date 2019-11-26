@@ -97,7 +97,7 @@ public class dnaChain2 : MonoBehaviour
         }
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.R) || (Input.GetButtonDown("P1 Heliocase")&& p2Progress.fillAmount >= 1f) )
+        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f)
         {
             deleteThree = true;
             p2Progress.fillAmount = 0f;
@@ -116,6 +116,7 @@ public class dnaChain2 : MonoBehaviour
                 Destroy(downHit.transform.gameObject); 
                 ScoreText2.Score2 -= 1;
                 time = 0.2f;
+                deleteThree = false;
                 deleteCounter++;
             }
         }

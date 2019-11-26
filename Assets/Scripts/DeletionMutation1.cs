@@ -36,7 +36,7 @@ public class DeletionMutation1 : MonoBehaviour
         stealDNA = false;
         //This variable should be set to false at start
         //And must turn true when the progress/combo bar is filled up
-        enableSteal = true;
+        enableSteal = false;
 
         createG = false;
         createC = false;
