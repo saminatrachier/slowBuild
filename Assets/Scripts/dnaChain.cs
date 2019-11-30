@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
@@ -29,15 +30,20 @@ public class dnaChain : MonoBehaviour
     public static bool inputMade2;
     private bool deleteThree;
     private int deleteCounter;
+    private int deleteCounter2;
     public float time;
+
+    public int pressCount;
     
    
     void Start()
     {
         inputMade2 = false;
         deleteCounter = 0;
+        deleteCounter2 = 0;
         deleteThree = false;
         time = 0.2f;
+        pressCount = 0;
     }
 
     // Update is called once per frame
@@ -49,8 +55,9 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += .05f;
+            p1Progress.fillAmount += 1f;
             StartCoroutine(ResetBool2());
+            pressCount += 1;
             inputMade2 = true;
 
             FindObjectOfType<AudioManager>().Play("Correct");
@@ -59,7 +66,8 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += .05f;
+            p1Progress.fillAmount += 1f;
+            pressCount += 1;
             inputMade2 = true;
 
             
@@ -70,7 +78,8 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += .05f;
+            p1Progress.fillAmount += 1f;
+            pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
@@ -82,7 +91,8 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += .05f;
+            p1Progress.fillAmount += 1f;
+            pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
@@ -91,14 +101,15 @@ public class dnaChain : MonoBehaviour
         
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount >= 1f) 
+        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount == 1f) 
         {
             deleteThree = true;
             p1Progress.fillAmount = 0f;
         }
-
+        
         if (deleteThree == true && deleteCounter < 3)
         {
+           
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);
@@ -110,10 +121,33 @@ public class dnaChain : MonoBehaviour
                 Destroy(downHit.transform.gameObject); 
                 ScoreText1.Score -= 1;
                 time = 0.2f;
+                deleteThree = false;
                 deleteCounter++;
             }
         }
 
+        if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
+        {
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject);
+                ScoreText1.Score = 0;
+                time = 0.02f;
+                deleteCounter2++;
+            }
+        }
+
+
+        if (ScoreText1.Score == 50)
+        {
+            SceneManager.LoadScene (2);
+        }
         if (p1Progress.fillAmount < 1.0f)
         {
             p1Progress.color = new Color(1, 1, 1, 1);

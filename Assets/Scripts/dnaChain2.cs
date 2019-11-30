@@ -30,6 +30,8 @@ public class dnaChain2 : MonoBehaviour
     
     private bool deleteThree;
     private int deleteCounter;
+    private int deleteCounter2;
+    public int pressCount;
     
     //These variables check if input has been made. This is important for the Deletion Mechanic
     //As I need to check if a block has spawn FIRST before deleting the opposing one.
@@ -41,6 +43,7 @@ public class dnaChain2 : MonoBehaviour
         timeLeft = maxTime;
         inputMade = false;
         deleteCounter = 0;
+        deleteCounter2 = 0;
         deleteThree = false;
         time = 0.2f;
     }
@@ -53,8 +56,9 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
             
 
@@ -63,8 +67,9 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
             
 
@@ -74,8 +79,9 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
           
 
@@ -85,25 +91,20 @@ public class dnaChain2 : MonoBehaviour
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
-            p2Progress.fillAmount += 0.5f;
+            p2Progress.fillAmount += 1f;
             inputMade = true;
+            pressCount += 1;
             StartCoroutine(ResetBool());
         }
         
         
-        if (timeLeft > 0 && cameraCinematic.startCinematic == false)
+        if (ScoreText2.Score2 == 50)
         {
-            timeLeft -= Time.deltaTime;
-            timer.fillAmount = timeLeft / maxTime;
-        }
-        else if (cameraCinematic.startCinematic == false)
-        {
-            Time.timeScale = 0;
             SceneManager.LoadScene (2);
         }
         
         //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f) 
+        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f)
         {
             deleteThree = true;
             p2Progress.fillAmount = 0f;
@@ -122,7 +123,25 @@ public class dnaChain2 : MonoBehaviour
                 Destroy(downHit.transform.gameObject); 
                 ScoreText2.Score2 -= 1;
                 time = 0.2f;
+                deleteThree = false;
                 deleteCounter++;
+            }
+        }
+        
+        if (Mutation2.Mutation == 3 && deleteCounter2 < pressCount)
+        {
+            float myMaxDistance2 = 2000f;
+            RaycastHit downHit;
+            Ray checkRay2 = new Ray(transform.position, -transform.up);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                StartCoroutine(MoveDown());
+                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
+                Destroy(downHit.transform.gameObject);
+                ScoreText2.Score2 = 0;
+                time = 0.02f;
+                deleteCounter2++;
             }
         }
         

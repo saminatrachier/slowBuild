@@ -25,7 +25,7 @@ public class DeletionMutation2 : MonoBehaviour
         stealDNA2 = false;
         //This variable should be set to false at start
         //And must turn true when the progress/combo bar is filled up
-        enableSteal2 = true;
+        enableSteal2 = false;
 
         createG2 = false;
         createC2 = false;
@@ -52,7 +52,7 @@ public class DeletionMutation2 : MonoBehaviour
 
         if (enableSteal2 == true)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
             {
                 dnaChainScript2.p2Progress.fillAmount = 0.0f;
                 

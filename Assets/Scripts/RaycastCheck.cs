@@ -160,7 +160,7 @@ public class RaycastCheck : MonoBehaviour
         }
 
         ///Insertion 
-        if ( Input.GetKeyDown(KeyCode.P))
+        if ( Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
         {
             if (DeletionMutation2.createG2)
             {

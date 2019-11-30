@@ -49,5 +49,19 @@ public class cameraCinematic : MonoBehaviour
             camera1.GetComponent<Transform> ().Translate (new Vector3 (0, 0.1f));
 
         }
+        else if ((Input.GetKey(KeyCode.LeftShift)) || Input.GetAxis("P1 Vertical") >= 1 || Input.GetAxis("P1 Vertical MAC") >= 1  && Mutation2.Mutation < 3 && startCinematic == false)
+        {
+            if (transform.position.y >= 1)
+            {
+                camera1.GetComponent<Transform> ().Translate (new Vector3 (0, -0.1f));
+            }
+        }
+        else if ((Input.GetKey(KeyCode.Return)) || Input.GetAxis("P2 Vertical") >= 1 || Input.GetAxis("P2 Vertical MAC") >= 1  && Mutation2.Mutation < 3 && startCinematic == false)
+        {
+            if (transform.position.y >= 1)
+            {
+                camera2.GetComponent<Transform> ().Translate (new Vector3 (0, -0.1f));
+            }
+        }
     }
 }
