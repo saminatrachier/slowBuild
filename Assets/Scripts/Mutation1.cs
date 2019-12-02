@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 
 //USAGE: put this on player 1's camera to change the background color when a mutation occurs
@@ -19,20 +20,22 @@ public class Mutation1 : MonoBehaviour
     
     public Color default1 = new Color(49, 77, 121, 0);
 
-    public Camera cam1;    
+    public Camera cam1;
+
+    public GameObject cameraParent;
 
     public static int Mutation = 0;
     public float time;
     public GameObject gameOverText;
-    public bool playSoundOnce;
+    public bool shakeOnlyOnce;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam1 = GetComponent<Camera>();
+        //cam1 = GetComponent<Camera>();
         gameOverText.SetActive(false);
         Mutation = 0;
-        playSoundOnce = false;
+        shakeOnlyOnce = false;
         time = 1f;
       //  endMarker = new Vector3(1.4f, 1f, -10f);
 
@@ -42,29 +45,48 @@ public class Mutation1 : MonoBehaviour
     void Update()
     {
         
-        
+        Debug.Log("Player 1 Mutation is at: " + Mutation);
         if (Mutation == 1)
         {
             cam1.backgroundColor =color1;
-
+            if (shakeOnlyOnce == false)
+            {
+                CameraShaker.Instance.ShakeOnce(5f, 5f, .1f, 1);
+                shakeOnlyOnce = true;
+            }
+             
         }
 
         if (Mutation == 2)
         {
+            
             cam1.backgroundColor = color2;
+            if (shakeOnlyOnce == true)
+            {
+                CameraShaker.Instance.ShakeOnce(5f, 5f, .1f, 1);
+                shakeOnlyOnce = false;
+            }
+
         }
 
         if (Mutation == 3)
         {
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
+          
 
-            cam1.transform.position = Vector3.Lerp(cam1.transform.position, player.transform.position, 2f * Time.deltaTime);
+            if (shakeOnlyOnce == false)
+            {
+                CameraShaker.Instance.ShakeOnce(5f, 5f, .1f, 1);
+                shakeOnlyOnce = true;
+            }
+                cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, player.transform.position, 2f * Time.deltaTime);
                 if (cam1.transform.position.y <= 1f)
                 {
                     cam1.backgroundColor = default1;
                     gameOverText.SetActive(false); 
                     Mutation = 0;
+                   
                 }
 
         }

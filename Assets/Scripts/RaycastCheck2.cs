@@ -79,7 +79,7 @@ public class RaycastCheck2 : MonoBehaviour
             opposingBlockPos = hit.transform.position;
             
             //The tags help us tell which is which.
-            Debug.Log("The Current Enemy Block is a G");
+            //Debug.Log("The Current Enemy Block is a G");
 
             //Now we gotta check if we can steal DNA. This is handled in DeletionMutation1
             if (DeletionMutation1.stealDNA && isDestroyed == false)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using EZCameraShake;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
@@ -21,6 +22,8 @@ public class dnaChain : MonoBehaviour
 
     public Image p1Progress;
     
+    public Image p2Progress;
+    
     //time left for player objects to appear
     public float timeLeft = 0f;
     
@@ -35,6 +38,9 @@ public class dnaChain : MonoBehaviour
 
     public int pressCount;
     
+    
+    //Reference to the parent
+    public GameObject cameraParent;
    
     void Start()
     {
@@ -60,6 +66,7 @@ public class dnaChain : MonoBehaviour
             pressCount += 1;
             inputMade2 = true;
 
+            CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1);
             FindObjectOfType<AudioManager>().Play("Correct");
         }
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -70,7 +77,7 @@ public class dnaChain : MonoBehaviour
             pressCount += 1;
             inputMade2 = true;
 
-            
+            CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1);
             FindObjectOfType<AudioManager>().Play("Correct");
 
         }
@@ -83,6 +90,7 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
+            CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1);
             FindObjectOfType<AudioManager>().Play("Correct");
 
 
@@ -96,15 +104,17 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
+            CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1);
             FindObjectOfType<AudioManager>().Play("Correct");
         }
         
         
-        //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.Y) && p1Progress.fillAmount == 1f) 
+        //Helicase Mechanic for Player 2 end
+        if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f) 
         {
             deleteThree = true;
-            p1Progress.fillAmount = 0f;
+            p2Progress.fillAmount = 0f;
+            CameraShaker.Instance.ShakeOnce(1f, 1f, .1f, 2);
         }
         
         if (deleteThree == true && deleteCounter < 3)
@@ -170,12 +180,14 @@ public class dnaChain : MonoBehaviour
         {
             yield return  new WaitForSeconds(0.1f);
             this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+            cameraParent.GetComponent<Transform>().Translate(new Vector3(0, 2f));
         }
         
         IEnumerator MoveDown()
         {
             yield return  new WaitForSeconds(0.1f);
             this.GetComponent<Transform>().Translate(new Vector3(0, -2f));
+            cameraParent.GetComponent<Transform>().Translate(new Vector3(0, -2f));
         }
 
     }
