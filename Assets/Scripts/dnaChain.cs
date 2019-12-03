@@ -69,7 +69,6 @@ public class dnaChain : MonoBehaviour
             pressCount += 1;
             inputMade2 = true;
 
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
         }
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
         {
@@ -80,7 +79,6 @@ public class dnaChain : MonoBehaviour
             pressCount += 1;
             inputMade2 = true;
 
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
 
         }
         if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -93,7 +91,6 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
 
 
         }
@@ -107,7 +104,6 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(ResetBool2());
             inputMade2 = true;
             
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
         }
         
         
@@ -116,7 +112,6 @@ public class dnaChain : MonoBehaviour
         {
             deleteThree = true;
             p2Progress.fillAmount = 0f;
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
         }
         
         if (deleteThree == true && deleteCounter < 3)
