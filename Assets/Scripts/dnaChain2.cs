@@ -131,7 +131,7 @@ public class dnaChain2 : MonoBehaviour
                 Destroy(downHit.transform.gameObject); 
                 ScoreText2.Score2 -= 1;
                 time = 0.2f;
-                deleteThree = false;
+                //deleteThree = false;
                 deleteCounter++;
             }
         }

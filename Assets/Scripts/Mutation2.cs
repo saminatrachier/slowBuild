@@ -71,13 +71,13 @@ public class Mutation2 : MonoBehaviour
             cam2.backgroundColor = color3;
             gameOverText.SetActive(true);
                 
-            if (shakeOnlyOnce == false)
-            {
-                CameraShaker.GetInstance("Main Camerap2").ShakeOnce(5f, 5f, .1f, 1);
-                shakeOnlyOnce = true;
-            }
+          //  if (shakeOnlyOnce == false)
+           // {
+            //    CameraShaker.GetInstance("Main Camerap2").ShakeOnce(5f, 5f, .1f, 1);
+            //    shakeOnlyOnce = true;
+           // }
 
-            cameraParent2.transform.position = Vector3.Lerp(cameraParent2.transform.position, player.transform.position, 2f * Time.deltaTime);
+            cam2.transform.position = Vector3.Lerp(cam2.transform.position, player.transform.position, 2f * Time.deltaTime);
             if (cam2.transform.position.y <= 1f)
             {
                 cam2.backgroundColor = default1;

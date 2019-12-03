@@ -126,12 +126,13 @@ public class dnaChain : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                StartCoroutine(MoveDown());
+                StartCoroutine(MoveDown2());
+                cameraParent.GetComponent<Transform>().Translate(new Vector3(0, -2f));
                 Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
                 Destroy(downHit.transform.gameObject); 
                 ScoreText1.Score -= 1;
                 time = 0.2f;
-                deleteThree = false;
+               // deleteThree = false;
                 deleteCounter++;
             }
         }
@@ -144,7 +145,7 @@ public class dnaChain : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
-                StartCoroutine(MoveDown());
+                StartCoroutine(MoveDown2());
                 Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
                 Destroy(downHit.transform.gameObject);
                 ScoreText1.Score = 0;
@@ -183,11 +184,10 @@ public class dnaChain : MonoBehaviour
             cameraParent.GetComponent<Transform>().Translate(new Vector3(0, 2f));
         }
         
-        IEnumerator MoveDown()
+        IEnumerator MoveDown2()
         {
             yield return  new WaitForSeconds(0.1f);
             this.GetComponent<Transform>().Translate(new Vector3(0, -2f));
-            cameraParent.GetComponent<Transform>().Translate(new Vector3(0, -2f));
         }
 
     }
