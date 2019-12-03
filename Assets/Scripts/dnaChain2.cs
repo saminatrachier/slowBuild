@@ -40,6 +40,7 @@ public class dnaChain2 : MonoBehaviour
     //As I need to check if a block has spawn FIRST before deleting the opposing one.
     //This is to fix a bug in where the block is stolen before the player has a chance to input anything, and will thus always get a mutation
     public static bool inputMade;
+    public GameObject cameraParent2;
     void Start()
     {
 
@@ -65,6 +66,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            FindObjectOfType<AudioManager>().Play("Correct");
             
 
         }
@@ -78,6 +80,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            FindObjectOfType<AudioManager>().Play("Correct");
 
         }
         if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -90,6 +93,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
           
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            FindObjectOfType<AudioManager>().Play("Correct");
 
 
         }
@@ -103,6 +107,7 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            FindObjectOfType<AudioManager>().Play("Correct");
         }
         
         
@@ -127,6 +132,7 @@ public class dnaChain2 : MonoBehaviour
             if (time <= 0)
             {
                 StartCoroutine(MoveDown());
+                cameraParent2.GetComponent<Transform>().Translate(new Vector3(0, -2f));
                 Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
                 Destroy(downHit.transform.gameObject); 
                 ScoreText2.Score2 -= 1;
@@ -177,6 +183,7 @@ public class dnaChain2 : MonoBehaviour
     {
         yield return  new WaitForSeconds(0.1f);
         this.GetComponent<Transform>().Translate(new Vector3(0, 2f));
+        cameraParent2.GetComponent<Transform>().Translate(new Vector3(0, 2f));
     }
     
     IEnumerator MoveDown()

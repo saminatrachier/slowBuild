@@ -74,21 +74,20 @@ public class Mutation1 : MonoBehaviour
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
           
-
-            if (shakeOnlyOnce == false)
+            cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, player.transform.position, 2f * Time.deltaTime);
+            if (cam1.transform.position.y <= 1f)
+            {
+                cam1.backgroundColor = default1;
+                gameOverText.SetActive(false); 
+                Mutation = 0;
+                   
+            }
+            
+            if (shakeOnlyOnce == true)
             {
                 CameraShaker.GetInstance("Main Camera").ShakeOnce(5f, 5f, .1f, 1);
-                shakeOnlyOnce = true;
+                shakeOnlyOnce = false;
             }
-                cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, player.transform.position, 2f * Time.deltaTime);
-                if (cam1.transform.position.y <= 1f)
-                {
-                    cam1.backgroundColor = default1;
-                    gameOverText.SetActive(false); 
-                    Mutation = 0;
-                   
-                }
-
         }
     }
 }

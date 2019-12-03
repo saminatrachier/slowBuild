@@ -29,6 +29,7 @@ public class player2C : MonoBehaviour
         {
             Debug.Log("Mutation++");
             Mutation2.Mutation += 1;
+            FindObjectOfType<AudioManager>().Play("Wrong");
 
         } 
     }
