@@ -111,7 +111,7 @@ public class dnaChain2 : MonoBehaviour
         }
         
         
-        if (ScoreText2.Score2 == 50)
+        if (progressBar.fillAmount >= 0.98f)
         {
             SceneManager.LoadScene (2);
         }

@@ -18,7 +18,7 @@ public class Mutation1 : MonoBehaviour
 
     public Color color1 = new Color(255, 185, 185, 255); //light red
     
-    public Color default1 = new Color(49, 77, 121, 0);
+    public Color default1 = new Color(255, 185, 185, 255); //light red
 
     public Camera cam1;
 

@@ -16,7 +16,9 @@ public class Mutation2 : MonoBehaviour
 
     public Color color1 = new Color(255, 185, 185, 255); //light red
     
-    public Color default1 = new Color(49, 77, 121, 0);
+    public Color color4 = new Color(255, 185, 185, 255); //light red
+    
+    //public Color default1 = new Color(255, 185, 185, 255); //light red
 
     public Camera cam2;
 
@@ -75,7 +77,7 @@ public class Mutation2 : MonoBehaviour
             cameraParent2.transform.position = Vector3.Lerp(cameraParent2.transform.position, player.transform.position, 2f * Time.deltaTime);
             if (cam2.transform.position.y <= 1f)
             {
-                cam2.backgroundColor = default1;
+                cam2.backgroundColor = color4;
                 gameOverText.SetActive(false); 
                 Mutation = 0;
             }

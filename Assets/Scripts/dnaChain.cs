@@ -159,10 +159,11 @@ public class dnaChain : MonoBehaviour
         }
 
 
-        if (ScoreText1.Score == 50)
+        if (progressBar.fillAmount >= 0.98f)
         {
             SceneManager.LoadScene (2);
         }
+        
         if (p1Progress.fillAmount < 1.0f)
         {
             p1Progress.color = new Color(1, 1, 1, 1);
