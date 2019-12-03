@@ -65,8 +65,8 @@ public class dnaChain2 : MonoBehaviour
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
-            
-            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            //screenshakep2 change
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 1f, .1f, 1);
             
 
         }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Game Center Admin\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Game Center Admin\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_slowBuild.-1162179991.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Game Center Admin\Documents\Unity Projects\Mutation Station\slowBuild" t="IncludeRecursive">
+    <e p="C:\Users\samin\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\samin\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_slowBuild.1054395726.00" t="ExcludeRecursive" />
+    <e p="C:\Users\samin\Documents\Major Studio (Fall 2019)\slowBuild" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AudioManager.cs" t="Include" />
@@ -44,6 +44,7 @@
           <e p="player2C.cs" t="Include" />
           <e p="player2G.cs" t="Include" />
           <e p="player2T.cs" t="Include" />
+          <e p="progressScript.cs" t="Include" />
           <e p="RaycastCheck.cs" t="Include" />
           <e p="RaycastCheck2.cs" t="Include" />
           <e p="ScoreText1.cs" t="Include" />
