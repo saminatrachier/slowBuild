@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using EZCameraShake;
 
 //PURPOSE: player2 (ARROW KEYS) player controller and progress bar
 //usage: put this on  player2enemyspawnmanager to spawn the prefabs randomly 
@@ -18,6 +19,8 @@ public class dnaChain2 : MonoBehaviour
     public GameObject prefabC;
 
     public GameObject prefabG;
+
+    public Image p1Progress;
     
     public Image p2Progress;
 
@@ -61,6 +64,8 @@ public class dnaChain2 : MonoBehaviour
             pressCount += 1;
             StartCoroutine(ResetBool());
             
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+            
 
         }
         if ((Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -72,7 +77,7 @@ public class dnaChain2 : MonoBehaviour
             pressCount += 1;
             StartCoroutine(ResetBool());
             
-
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
 
         }
         if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -84,6 +89,7 @@ public class dnaChain2 : MonoBehaviour
             pressCount += 1;
             StartCoroutine(ResetBool());
           
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
 
 
         }
@@ -95,6 +101,8 @@ public class dnaChain2 : MonoBehaviour
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
+            
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
         }
         
         
@@ -103,11 +111,11 @@ public class dnaChain2 : MonoBehaviour
             SceneManager.LoadScene (2);
         }
         
-        //Helicase Mechanic
-        if (Input.GetKeyDown(KeyCode.R) && p2Progress.fillAmount >= 1f)
+        //Helicase Mechanic for Player 1's End
+        if (Input.GetKeyDown(KeyCode.R) && p1Progress.fillAmount >= 1f)
         {
             deleteThree = true;
-            p2Progress.fillAmount = 0f;
+            p1Progress.fillAmount = 0f;
         }
 
         if (deleteThree == true && deleteCounter < 3)
