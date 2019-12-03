@@ -53,7 +53,7 @@ public class Mutation2 : MonoBehaviour
             cam2.backgroundColor = color3;
             gameOverText.SetActive(true);
 
-            cam2.transform.position = Vector3.Lerp(cam2.transform.position, player.transform.position, 2f * Time.deltaTime);
+            cam2.transform.position = Vector3.Lerp(cam2.transform.position, player.transform.position, 1.5f * Time.deltaTime);
             if (cam2.transform.position.y <= 1f)
             {
                 cam2.backgroundColor = default1;
