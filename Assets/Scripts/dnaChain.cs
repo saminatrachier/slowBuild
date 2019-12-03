@@ -63,7 +63,7 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += 1f;
+            p1Progress.fillAmount += 0.05f;
             StartCoroutine(ResetBool2());
             progressBar.fillAmount += 0.02f;
             pressCount += 1;
@@ -75,7 +75,7 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += 1f;
+            p1Progress.fillAmount += 0.05f;
             progressBar.fillAmount += 0.02f;
             pressCount += 1;
             inputMade2 = true;
@@ -87,7 +87,7 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += 1f;
+            p1Progress.fillAmount += 0.05f;
             progressBar.fillAmount += 0.02f;
             pressCount += 1;
             StartCoroutine(ResetBool2());
@@ -101,7 +101,7 @@ public class dnaChain : MonoBehaviour
         {
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
-            p1Progress.fillAmount += 1f;
+            p1Progress.fillAmount += 0.05f;
             progressBar.fillAmount += 0.02f;
             pressCount += 1;
             StartCoroutine(ResetBool2());
