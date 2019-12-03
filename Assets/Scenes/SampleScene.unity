@@ -2868,7 +2868,7 @@ MonoBehaviour:
   mutation: {fileID: 534669902}
   time: 0
   shakeOnlyOnce: 0
-  cameraParent2: {fileID: 0}
+  cameraParent2: {fileID: 1775309129}
 --- !u!1 &1867497343
 GameObject:
   m_ObjectHideFlags: 0
