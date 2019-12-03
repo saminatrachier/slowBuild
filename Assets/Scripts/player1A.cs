@@ -27,8 +27,8 @@ public class player1A : MonoBehaviour
         }
         else
         {
-            Debug.Log("Mutation++");
             Mutation1.Mutation += 1;
+            Debug.Log(Mutation1.Mutation);
             FindObjectOfType<AudioManager>().Play("Wrong");
         } 
     }
