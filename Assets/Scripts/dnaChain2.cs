@@ -65,7 +65,9 @@ public class dnaChain2 : MonoBehaviour
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
-                        
+            //screenshakep2 change
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 1f, .1f, 1);
+            
 
         }
         if ((Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetButtonDown("P2 Up"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -78,6 +80,7 @@ public class dnaChain2 : MonoBehaviour
             pressCount += 1;
             StartCoroutine(ResetBool());
             
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
 
         }
         if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -90,6 +93,8 @@ public class dnaChain2 : MonoBehaviour
             pressCount += 1;
             StartCoroutine(ResetBool());
           
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+
 
         }
         if ((Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetButtonDown("P2 Right") )&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -101,10 +106,12 @@ public class dnaChain2 : MonoBehaviour
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
-            }
+            
+            CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
+        }
         
         
-        if (progressBar.fillAmount >= 0.98f)
+        if (ScoreText2.Score2 == 50)
         {
             SceneManager.LoadScene (2);
         }
