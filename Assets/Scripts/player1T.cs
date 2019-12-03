@@ -25,6 +25,7 @@ public class player1C : MonoBehaviour
             
             Debug.Log("Score++");
             ScoreText1.Score += 1;
+            FindObjectOfType<AudioManager>().Play("Correct");
 
         }
         else

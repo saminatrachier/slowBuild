@@ -23,6 +23,7 @@ public class player2T : MonoBehaviour
             
             Debug.Log("Score++");
             ScoreText2.Score2 += 1;
+            FindObjectOfType<AudioManager>().Play("Correct");
 
         }
         else

@@ -66,7 +66,6 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
-            FindObjectOfType<AudioManager>().Play("Correct");
             
 
         }
@@ -80,7 +79,6 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
-            FindObjectOfType<AudioManager>().Play("Correct");
 
         }
         if ((Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetButtonDown("P2 Down"))&& Mutation2.Mutation < 3 && cameraCinematic.startCinematic == false)
@@ -93,7 +91,6 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
           
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
-            FindObjectOfType<AudioManager>().Play("Correct");
 
 
         }
@@ -107,7 +104,6 @@ public class dnaChain2 : MonoBehaviour
             StartCoroutine(ResetBool());
             
             CameraShaker.GetInstance("Main Camerap2").ShakeOnce(2f, 2f, .1f, 1);
-            FindObjectOfType<AudioManager>().Play("Correct");
         }
         
         
