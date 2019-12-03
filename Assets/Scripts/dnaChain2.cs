@@ -24,7 +24,7 @@ public class dnaChain2 : MonoBehaviour
     
     public Image p2Progress;
 
-    
+    public Image progressBar;
     //time left for player objects to appear
     public Image timer;
     public float time;
@@ -61,6 +61,7 @@ public class dnaChain2 : MonoBehaviour
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
@@ -74,6 +75,7 @@ public class dnaChain2 : MonoBehaviour
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
@@ -86,6 +88,7 @@ public class dnaChain2 : MonoBehaviour
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
@@ -99,6 +102,7 @@ public class dnaChain2 : MonoBehaviour
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp());
             p2Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             inputMade = true;
             pressCount += 1;
             StartCoroutine(ResetBool());
@@ -140,6 +144,7 @@ public class dnaChain2 : MonoBehaviour
         
         if (Mutation2.Mutation == 3 && deleteCounter2 < pressCount)
         {
+            progressBar.fillAmount = 0f;
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);

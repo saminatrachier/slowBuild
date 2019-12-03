@@ -24,6 +24,8 @@ public class dnaChain : MonoBehaviour
     
     public Image p2Progress;
     
+    public Image progressBar;
+    
     //time left for player objects to appear
     public float timeLeft = 0f;
     
@@ -63,6 +65,7 @@ public class dnaChain : MonoBehaviour
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
             StartCoroutine(ResetBool2());
+            progressBar.fillAmount += 0.02f;
             pressCount += 1;
             inputMade2 = true;
 
@@ -73,6 +76,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             pressCount += 1;
             inputMade2 = true;
 
@@ -84,6 +88,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
@@ -97,6 +102,7 @@ public class dnaChain : MonoBehaviour
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 1f;
+            progressBar.fillAmount += 0.02f;
             pressCount += 1;
             StartCoroutine(ResetBool2());
             inputMade2 = true;
@@ -135,6 +141,7 @@ public class dnaChain : MonoBehaviour
 
         if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
         {
+            progressBar.fillAmount = 0f;
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);
