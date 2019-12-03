@@ -2922,19 +2922,19 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 4dfb9d737fd43473e87a6c421cdc58f0, type: 3}
-    volume: 0.5
+    volume: 0.319
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Correct
-    clip: {fileID: 8300000, guid: 84f69a81831e755459befc608ed076db, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 2d08dcac4ea184dbb91b359968345c4c, type: 3}
+    volume: 0.787
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Wrong
-    clip: {fileID: 8300000, guid: e9a70051978bc9245a080e8ba08e20b7, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 7314a6faafb6645f2b723a6d9fa23208, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
