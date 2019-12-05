@@ -25,6 +25,8 @@ public class dnaChain : MonoBehaviour
     public Image p2Progress;
     
     public Image progressBar;
+
+    public static bool winner;
     
     //time left for player objects to appear
     public float timeLeft = 0f;
@@ -52,6 +54,7 @@ public class dnaChain : MonoBehaviour
         deleteThree = false;
         time = 0.2f;
         pressCount = 0;
+        winner = false;
     }
 
     // Update is called once per frame
@@ -161,6 +164,7 @@ public class dnaChain : MonoBehaviour
 
         if (progressBar.fillAmount >= 0.98f)
         {
+            winner = true;
             SceneManager.LoadScene (2);
         }
         

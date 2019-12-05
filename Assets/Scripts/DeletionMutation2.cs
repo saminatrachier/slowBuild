@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.UNetWeaver;
 
 public class DeletionMutation2 : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class DeletionMutation2 : MonoBehaviour
     public static bool createT2;
 
     public TextMeshProUGUI holdText2;
+
+    public TextMeshProUGUI deletion;
+
+    public float timer;
+    public float timer2;
     
     //Refernece to the Progress Bar for Player 1
     public GameObject player2Spawn;
@@ -22,6 +28,7 @@ public class DeletionMutation2 : MonoBehaviour
     
     void Start()
     {
+        deletion.text = null;
         stealDNA2 = false;
         //This variable should be set to false at start
         //And must turn true when the progress/combo bar is filled up
@@ -31,6 +38,9 @@ public class DeletionMutation2 : MonoBehaviour
         createC2 = false;
         createA2 = false;
         createT2 = false;
+
+        timer = 0f;
+        timer2 = 0f;
 
         holdText2.text = "HOLD:";
 
@@ -50,12 +60,40 @@ public class DeletionMutation2 : MonoBehaviour
             //When progress bar is full, reset isDestorye from raycastcheck2 to false;
         }
 
+        if (deletion.text == "DELETION")
+        {
+            timer += Time.deltaTime;
+
+            if (timer > 1f)
+            {
+                deletion.text = " ";
+            }
+        }
+        
+        if (deletion.text == "INSERTION")
+        {
+            timer2 += Time.deltaTime;
+
+            if (timer2 > 1f)
+            {
+                deletion.text = " ";
+            }
+        }
+
         if (enableSteal2 == true)
         {
             if (Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
             {
                 dnaChainScript2.p2Progress.fillAmount = 0.0f;
-                
+                if (timer <= 1f)
+                {
+                    deletion.text = "DELETION";
+                }
+
+                if (timer2 <= 1f && timer > 0)
+                {
+                    deletion.text = "INSERTION";
+                }
                 stealDNA2 = true;
             }
 
