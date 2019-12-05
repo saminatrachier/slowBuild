@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using EZCameraShake;
+using TMPro;
 
 //PURPOSE: player2 (ARROW KEYS) player controller and progress bar
 //usage: put this on  player2enemyspawnmanager to spawn the prefabs randomly 
@@ -25,6 +26,8 @@ public class dnaChain2 : MonoBehaviour
     public Image p2Progress;
 
     public Image progressBar;
+    
+    public TextMeshProUGUI helicase;
     //time left for player objects to appear
     public Image timer;
 
@@ -45,7 +48,7 @@ public class dnaChain2 : MonoBehaviour
     public GameObject cameraParent2;
     void Start()
     {
-
+        helicase.text = null;
         timeLeft = maxTime;
         inputMade = false;
         deleteCounter = 0;
@@ -123,6 +126,7 @@ public class dnaChain2 : MonoBehaviour
         //Helicase Mechanic for Player 1's End
         if (Input.GetKeyDown(KeyCode.R) && p1Progress.fillAmount >= 1f)
         {
+            helicase.text = "HELICASE";
             deleteThree = true;
             p1Progress.fillAmount = 0f;
         }
@@ -144,6 +148,10 @@ public class dnaChain2 : MonoBehaviour
                 //deleteThree = false;
                 deleteCounter++;
             }
+        }
+        else
+        {
+            helicase.text = null;
         }
         
         if (Mutation2.Mutation == 3 && deleteCounter2 < pressCount)
