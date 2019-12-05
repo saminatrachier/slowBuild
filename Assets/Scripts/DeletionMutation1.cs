@@ -25,6 +25,11 @@ public class DeletionMutation1 : MonoBehaviour
     public static bool createA;
     public static bool createT;
 
+    public TextMeshProUGUI deletion;
+
+    public float timer;
+    public float timer2;
+
     public TextMeshProUGUI holdText;
     
     //Refernece to the Progress Bar for Player 1
@@ -33,6 +38,7 @@ public class DeletionMutation1 : MonoBehaviour
     
     void Start()
     {
+        deletion.text = null;
         stealDNA = false;
         //This variable should be set to false at start
         //And must turn true when the progress/combo bar is filled up
@@ -43,6 +49,8 @@ public class DeletionMutation1 : MonoBehaviour
         createA = false;
         createT = false;
 
+        timer = 0f;
+        timer2 = 0f;
         holdText.text = "HOLD:";
 
         dnaChainScript = player1Spawn.GetComponent<dnaChain>();
@@ -60,13 +68,41 @@ public class DeletionMutation1 : MonoBehaviour
            
             //When progress bar is full, reset isDestorye from raycastcheck2 to false;
         }
+        
+        if (deletion.text == "DELETION")
+        {
+            timer += Time.deltaTime;
+
+            if (timer > 1f)
+            {
+                deletion.text = " ";
+            }
+        }
+        
+        if (deletion.text == "INSERTION")
+        {
+            timer2 += Time.deltaTime;
+
+            if (timer2 > 1f)
+            {
+                deletion.text = " ";
+            }
+        }
 
         if (enableSteal == true)
         {
             if (Input.GetKeyDown(KeyCode.Q) || (Input.GetButtonDown("P1 Delete")))
             {
                 dnaChainScript.p1Progress.fillAmount = 0.0f;
-                
+                if (timer <= 1f)
+                {
+                    deletion.text = "DELETION";
+                }
+
+                if (timer2 <= 1f && timer > 0)
+                {
+                    deletion.text = "INSERTION";
+                }
                 stealDNA = true;
             }
 
