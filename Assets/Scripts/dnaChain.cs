@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using EZCameraShake;
+using TMPro;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
@@ -28,6 +29,8 @@ public class dnaChain : MonoBehaviour
 
     public static bool winner;
     
+    public TextMeshProUGUI helicase;
+    
     //time left for player objects to appear
     public float timeLeft = 0f;
     
@@ -48,6 +51,7 @@ public class dnaChain : MonoBehaviour
    
     void Start()
     {
+        helicase.text = null;
         inputMade2 = false;
         deleteCounter = 0;
         deleteCounter2 = 0;
@@ -116,8 +120,9 @@ public class dnaChain : MonoBehaviour
         
         
         //Helicase Mechanic for Player 2 end
-        if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f) 
+        if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f)
         {
+            helicase.text = "HELICASE";
             deleteThree = true;
             p2Progress.fillAmount = 0f;
             CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
@@ -141,6 +146,10 @@ public class dnaChain : MonoBehaviour
                // deleteThree = false;
                 deleteCounter++;
             }
+        }
+        else
+        {
+            helicase.text = null;
         }
 
         if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
