@@ -38,6 +38,10 @@ public class RaycastCheck : MonoBehaviour
     
     //Reference to Music
     public bool playOnce;
+    
+    //Finally a reference to DeletionMutation1
+    public GameObject dnaSpanwer2;
+    public DeletionMutation2 deleteScript2;
 
     void Start()
     {
@@ -50,6 +54,8 @@ public class RaycastCheck : MonoBehaviour
         isDestroyed2 = false;
 
         playOnce = true;
+        
+        deleteScript2 = dnaSpanwer2.GetComponent<DeletionMutation2>();
 
     }
 
@@ -57,7 +63,7 @@ public class RaycastCheck : MonoBehaviour
     void Update()
     {
          //First, we create a raycast that this object will make to check what the current opposing block is.
-        Ray checkRay = new Ray(transform.position, -transform.right);
+        Ray checkRay = new Ray(transform.position, -transform.forward);
         //This raycast checks whats below
         Ray checkRay2 = new Ray(transform.position, -transform.up);
         RaycastHit hit;
@@ -67,7 +73,7 @@ public class RaycastCheck : MonoBehaviour
 
         thisBlockPos2 = this.transform.position;
 
-        Debug.DrawRay(transform.position, -transform.up, Color.magenta);
+        Debug.DrawRay(transform.position, -transform.forward, Color.magenta);
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
         {
             //Then we check what each raycast is hitting
@@ -184,6 +190,9 @@ public class RaycastCheck : MonoBehaviour
                     StartCoroutine(PlaceBlockG());
                     FindObjectOfType<AudioManager>().Play("Place");
                     DeletionMutation2.createG2 = false;
+                
+                deleteScript2.enableSteal2 = false;
+                deleteScript2.holdText2.text = "NOT HOLDING";
          
             }
 
@@ -199,6 +208,8 @@ public class RaycastCheck : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockC());
                     DeletionMutation2.createC2 = false;
+                deleteScript2.enableSteal2 = false;
+                deleteScript2.holdText2.text = "NOT HOLDING";
              
                
             }
@@ -215,6 +226,8 @@ public class RaycastCheck : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockA());
                     DeletionMutation2.createA2 = false;
+                deleteScript2.enableSteal2 = false;
+                deleteScript2.holdText2.text = "NOT HOLDING";
        
                
      
@@ -233,8 +246,9 @@ public class RaycastCheck : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockT());
                     DeletionMutation2.createT2 = false;
+                deleteScript2.enableSteal2 = false;
+                deleteScript2.holdText2.text = "NOT HOLDING";
             
-               
             }
 
 
@@ -243,7 +257,7 @@ public class RaycastCheck : MonoBehaviour
         IEnumerator PlaceBlockG()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabG, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
+            Instantiate(prefabG, new Vector3(0, thisBlockPos2.y, 0), new Quaternion(0f,90f,0f,0f));
             Debug.Log("Place the Block In");
             
             ///Now we need to reset things in order to allow the mechanic to be used again.
@@ -253,7 +267,7 @@ public class RaycastCheck : MonoBehaviour
         IEnumerator PlaceBlockC()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabC, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
+            Instantiate(prefabC, new Vector3(0, thisBlockPos2.y, 0), new Quaternion(0f,90f,0f,0f));
             Debug.Log("Place the Block In");
             
         }
@@ -261,14 +275,14 @@ public class RaycastCheck : MonoBehaviour
         IEnumerator PlaceBlockA()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabA, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
+            Instantiate(prefabA, new Vector3(0, thisBlockPos2.y, 0), new Quaternion(0f,90f,0f,0f));
             Debug.Log("Place the Block In");
         }
         
         IEnumerator PlaceBlockT()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabT, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
+            Instantiate(prefabT, new Vector3(0, thisBlockPos2.y, 0), new Quaternion(0f,90f,0f,0f));
             Debug.Log("Place the Block In");
         }
     }

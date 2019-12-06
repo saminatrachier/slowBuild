@@ -7,7 +7,7 @@ using Unity.UNetWeaver;
 public class DeletionMutation2 : MonoBehaviour
 {
     public static bool stealDNA2;
-    private bool enableSteal2;
+    public bool enableSteal2;
     
     //Variables that allow for a new prefab to be made
     public static bool createG2;

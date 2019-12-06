@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -343,7 +343,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &142325713
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &170076733
@@ -604,7 +604,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &194127487
@@ -921,7 +921,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &274272573
@@ -1006,7 +1006,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &289334386
@@ -1066,7 +1066,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 034593fc94a62d94fbb2a1c819fa5717, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50e11028d1af445f2aa3c074e60c8ab9, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1146,7 +1146,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &305856246
@@ -1237,7 +1237,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dd0e7deb7513c674bb16be78bf98ad9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20e858afa639144a395558093a9d6a17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1571,6 +1571,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &550156285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,7 +1657,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &568010259
@@ -1738,7 +1742,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &590462145
@@ -1907,6 +1911,8 @@ MonoBehaviour:
   opposingBlockPos2: {x: 0, y: 0, z: 0}
   thisBlockPos2: {x: 0, y: 0, z: 0}
   playOnce: 0
+  dnaSpanwer2: {fileID: 1574186664}
+  deleteScript2: {fileID: 0}
 --- !u!65 &630857906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2278,7 +2284,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &737479801
@@ -2482,6 +2488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!20 &739129656
 Camera:
   m_ObjectHideFlags: 0
@@ -2681,7 +2691,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &777302671
@@ -3140,7 +3150,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1123198363
@@ -3284,7 +3294,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 034593fc94a62d94fbb2a1c819fa5717, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50e11028d1af445f2aa3c074e60c8ab9, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3383,7 +3393,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1245639095
@@ -3874,7 +3884,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1572017067 stripped
@@ -3937,8 +3947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74bac7cdef2587542b10ec02361e686e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableSteal2: 0
   holdText2: {fileID: 737479803}
-  deletion: {fileID: 0}
+  deletion: {fileID: 194127489}
   timer: 0
   timer2: 0
   player2Spawn: {fileID: 1574186664}
@@ -3977,7 +3988,7 @@ MonoBehaviour:
   p1Progress: {fileID: 243698960}
   p2Progress: {fileID: 2123462609}
   progressBar: {fileID: 1144565605}
-  helicase: {fileID: 0}
+  helicase: {fileID: 1294484136}
   timer: {fileID: 0}
   time: 0
   timeLeft: 0
@@ -4066,7 +4077,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1598179940
@@ -4132,7 +4143,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1598179942
@@ -4492,7 +4503,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1656581320
@@ -4606,7 +4617,7 @@ MonoBehaviour:
   opposingBlockPos: {x: 0, y: 0, z: 0}
   thisBlockPos: {x: 0, y: 0, z: 0}
   playOnce: 0
-  dnaSpanwer1: {fileID: 0}
+  dnaSpanwer1: {fileID: 1707587750}
   deleteScript1: {fileID: 0}
 --- !u!1 &1684727046
 GameObject:
@@ -4690,7 +4701,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1695816037
@@ -4775,7 +4786,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1707587750
@@ -4809,7 +4820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableSteal: 0
-  deletion: {fileID: 0}
+  deletion: {fileID: 2076305727}
   timer: 0
   timer2: 0
   holdText: {fileID: 1245639097}
@@ -4849,7 +4860,7 @@ MonoBehaviour:
   p1Progress: {fileID: 243698960}
   p2Progress: {fileID: 2123462609}
   progressBar: {fileID: 289334388}
-  helicase: {fileID: 0}
+  helicase: {fileID: 1082119708}
   timeLeft: 0.25
   time: 0
   pressCount: 0
@@ -4998,7 +5009,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1775309129
@@ -5156,7 +5167,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1796411358
@@ -5241,7 +5252,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1812447659
@@ -5572,7 +5583,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1923159481
@@ -5705,7 +5716,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2064158842
@@ -5790,7 +5801,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2076305725
@@ -6032,7 +6043,7 @@ SpriteRenderer:
   m_Size: {x: 9.6, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2098680296

@@ -69,21 +69,24 @@ public class RaycastCheck2 : MonoBehaviour
     void Update()
     {
         //First, we create a raycast that this object will make to check what the current opposing block is.
-        Ray checkRay = new Ray(transform.position, -transform.right);
+        Ray checkRay = new Ray(transform.position, -transform.forward);
         Ray checkRay2 = new Ray(transform.position, -transform.up);
         RaycastHit hit;
         RaycastHit downHit;
         float myMaxDistance = 5f;
         float myMaxDistance2 = 2000f;
 
+        Debug.Log(isDestroyed);
+
         thisBlockPos = this.transform.position;
 
-        Debug.DrawRay(transform.position, -transform.up, Color.magenta);
+        Debug.DrawRay(transform.position, -transform.forward, Color.magenta);
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
         {
             //Then we check what each raycast is hitting
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform.tag == "G")
         {
+            Debug.Log("OOOP");
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
             opposingBlockPos = hit.transform.position;
@@ -110,7 +113,6 @@ public class RaycastCheck2 : MonoBehaviour
         }
         else if (hit.transform.tag == "C")
         {
-            
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
             opposingBlockPos = hit.transform.position;
@@ -130,7 +132,6 @@ public class RaycastCheck2 : MonoBehaviour
         }
         else if (hit.transform.tag == "A" && isDestroyed == false)
         {
-            
             //Reference to where the current opposing block is.
             //This helps when replacing the block later
             opposingBlockPos = hit.transform.position;
@@ -293,7 +294,7 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockG()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabG, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabG, new Vector3(47, thisBlockPos.y, 0), new Quaternion(0f,90f,0f,0f));
             DeletionMutation1.createG = false;
             gotG = false;
             Debug.Log("Place the Block In");
@@ -304,7 +305,7 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockC()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabC, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabC, new Vector3(47, thisBlockPos.y, 0), new Quaternion(0f,90f,0f,0f));
             DeletionMutation1.createC = false;
             gotC = false;
             Debug.Log("Place the Block In");
@@ -314,7 +315,7 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockA()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabA, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabA, new Vector3(47, thisBlockPos.y, 0), new Quaternion(0f,90f,0f,0f));
             DeletionMutation1.createA = false;
             gotA = false;    
             Debug.Log("Place the Block In");
@@ -323,7 +324,7 @@ public class RaycastCheck2 : MonoBehaviour
         IEnumerator PlaceBlockT()
         {
             yield return new WaitForSeconds(0.1f);
-            Instantiate(prefabT, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            Instantiate(prefabT, new Vector3(47, thisBlockPos.y, 0), new Quaternion(0f,90f,0f,0f));
             DeletionMutation1.createT = false;
             gotT = false;
             Debug.Log("Place the Block In");
