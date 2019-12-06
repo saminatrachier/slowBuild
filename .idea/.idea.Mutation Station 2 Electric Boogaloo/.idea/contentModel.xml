@@ -44,6 +44,7 @@
           <e p="player2C.cs" t="Include" />
           <e p="player2G.cs" t="Include" />
           <e p="player2T.cs" t="Include" />
+          <e p="PlayerWin.cs" t="Include" />
           <e p="progressScript.cs" t="Include" />
           <e p="RaycastCheck.cs" t="Include" />
           <e p="RaycastCheck2.cs" t="Include" />

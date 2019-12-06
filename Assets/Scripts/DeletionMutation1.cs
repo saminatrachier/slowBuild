@@ -17,7 +17,7 @@ using TMPro;
 public class DeletionMutation1 : MonoBehaviour
 {
     public static bool stealDNA;
-    private bool enableSteal;
+    public bool enableSteal;
     
     //Variables that allow for a new prefab to be made
     public static bool createG;
