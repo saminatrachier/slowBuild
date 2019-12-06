@@ -21,6 +21,6 @@ public class ScoreText2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text2.text = Score2.ToString();
+        //text2.text = Score2.ToString();
     }
 }
