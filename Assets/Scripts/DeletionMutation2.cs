@@ -26,6 +26,10 @@ public class DeletionMutation2 : MonoBehaviour
     public GameObject player2Spawn;
     public dnaChain2 dnaChainScript2; 
     
+    //Music Reference
+    private bool playOnce;
+    
+    
     void Start()
     {
         deletion.text = null;
@@ -45,6 +49,9 @@ public class DeletionMutation2 : MonoBehaviour
         holdText2.text = "HOLD:";
 
         dnaChainScript2 = player2Spawn.GetComponent<dnaChain2>();
+        
+        playOnce = true;
+
 
     }
 
@@ -95,6 +102,10 @@ public class DeletionMutation2 : MonoBehaviour
                     deletion.text = "INSERTION";
                 }
                 stealDNA2 = true;
+                if (playOnce == false)
+                {
+                    playOnce = true;
+                }
             }
 
             if (RaycastCheck.gotG2)
@@ -102,24 +113,48 @@ public class DeletionMutation2 : MonoBehaviour
                 //Put a UI thing that shows the current holding dna block;
                 holdText2.text = "HOLD: G";
                 createG2 = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
 
             if (RaycastCheck.gotC2)
             {
                 holdText2.text = "HOLD: C";
                 createC2 = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
             
             if (RaycastCheck.gotA2)
             {
                 holdText2.text = "HOLD: A";
                 createA2 = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
             
             if (RaycastCheck.gotT2)
             {
                 holdText2.text = "HOLD: T";
                 createT2 = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
         }
        

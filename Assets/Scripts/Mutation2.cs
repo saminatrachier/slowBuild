@@ -54,6 +54,7 @@ public class Mutation2 : MonoBehaviour
             if (shakeOnlyOnce == false)
             {
                 CameraShaker.GetInstance("Main Camerap2").ShakeOnce(5f, 5f, .1f, 1);
+                FindObjectOfType<AudioManager>().Play("Wrong");
                 shakeOnlyOnce = true;
             }
         }
@@ -64,6 +65,7 @@ public class Mutation2 : MonoBehaviour
             if (shakeOnlyOnce == true)
             {
                 CameraShaker.GetInstance("Main Camerap2").ShakeOnce(5f, 5f, .1f, 1);
+                FindObjectOfType<AudioManager>().Play("Wrong");
                 shakeOnlyOnce = false;
             }
         }

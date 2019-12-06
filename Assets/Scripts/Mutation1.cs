@@ -52,6 +52,7 @@ public class Mutation1 : MonoBehaviour
             if (shakeOnlyOnce == false)
             {
                 CameraShaker.GetInstance("Main Camera").ShakeOnce(5f, 5f, .1f, 1);
+               
                 shakeOnlyOnce = true;
             }
              
@@ -64,6 +65,7 @@ public class Mutation1 : MonoBehaviour
             if (shakeOnlyOnce == true)
             {
                 CameraShaker.GetInstance("Main Camera").ShakeOnce(5f, 5f, .1f, 1);
+                FindObjectOfType<AudioManager>().Play("Wrong");
                 shakeOnlyOnce = false;
             }
 
@@ -77,15 +79,18 @@ public class Mutation1 : MonoBehaviour
             cameraParent.transform.position = Vector3.Lerp(cameraParent.transform.position, player.transform.position, 2f * Time.deltaTime);
             if (cam1.transform.position.y <= 1f)
             {
+                FindObjectOfType<AudioManager>().Play("Fatal");
                 cam1.backgroundColor = default1;
                 gameOverText.SetActive(false); 
                 Mutation = 0;
                    
             }
             
+           
             if (shakeOnlyOnce == true)
             {
                 CameraShaker.GetInstance("Main Camera").ShakeOnce(5f, 5f, .1f, 1);
+                
                 shakeOnlyOnce = false;
             }
         }
