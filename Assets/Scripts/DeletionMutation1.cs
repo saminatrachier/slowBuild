@@ -17,7 +17,7 @@ using TMPro;
 public class DeletionMutation1 : MonoBehaviour
 {
     public static bool stealDNA;
-    private bool enableSteal;
+    public bool enableSteal;
     
     //Variables that allow for a new prefab to be made
     public static bool createG;
@@ -30,6 +30,9 @@ public class DeletionMutation1 : MonoBehaviour
     //Refernece to the Progress Bar for Player 1
     public GameObject player1Spawn;
     public dnaChain dnaChainScript; 
+    
+    //Music Reference
+    private bool playOnce;
     
     void Start()
     {
@@ -47,6 +50,8 @@ public class DeletionMutation1 : MonoBehaviour
 
         dnaChainScript = player1Spawn.GetComponent<dnaChain>();
 
+        playOnce = true;
+
     }
 
     
@@ -57,8 +62,8 @@ public class DeletionMutation1 : MonoBehaviour
         {
             enableSteal = true;
             RaycastCheck2.isDestroyed = false;
-           
-            //When progress bar is full, reset isDestorye from raycastcheck2 to false;
+         
+            //When progress bar is full, reset isDestoryed from raycastcheck2 to false;
         }
 
         if (enableSteal == true)
@@ -66,31 +71,65 @@ public class DeletionMutation1 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) || (Input.GetButtonDown("P1 Delete")))
             {
                 dnaChainScript.p1Progress.fillAmount = 0.0f;
-                
                 stealDNA = true;
+
+                if (playOnce == false)
+                {
+                    playOnce = true;
+                }
+                
+                if (FindObjectOfType<RaycastCheck2>().playOnce == false)
+                {
+                    FindObjectOfType<RaycastCheck2>().playOnce = true;
+                }
+
+          
+                
+               
             }
 
             if (RaycastCheck2.gotG)
             {
                 //Put a UI thing that shows the current holding dna block;
+                
                 holdText.text = "HOLD: G";
                 createG = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
 
             if (RaycastCheck2.gotC)
             {
+               
                 holdText.text = "HOLD: C";
                 createC = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
             
             if (RaycastCheck2.gotA)
             {
                 holdText.text = "HOLD: A";
                 createA = true;
+                
+                if (playOnce)
+                {
+                    FindObjectOfType<AudioManager>().Play("Stolen");
+                    playOnce = false;
+                }
             }
             
             if (RaycastCheck2.gotT)
             {
+               
                 holdText.text = "HOLD: T";
                 createT = true;
             }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 
 //USAGE: This script goes on the Raycast 2 Gameobject. This block will always check
 //The current Enemy DNA Block.
@@ -40,7 +41,12 @@ public class RaycastCheck2 : MonoBehaviour
     //Variable to check if the prefab has been deleted
     public static bool isDestroyed;
 
-
+    //Music Reference
+    public bool playOnce;
+    
+    //Finally a reference to DeletionMutation1
+    public GameObject dnaSpanwer1;
+    public DeletionMutation1 deleteScript1;
 
     void Start()
     {
@@ -52,6 +58,10 @@ public class RaycastCheck2 : MonoBehaviour
 
         isDestroyed = false;
 
+
+        playOnce = true;
+
+        deleteScript1 = dnaSpanwer1.GetComponent<DeletionMutation1>();
 
     }
 
@@ -178,12 +188,23 @@ public class RaycastCheck2 : MonoBehaviour
                    Destroy(hit.transform.gameObject); 
                 }
                     
-                    //then raycastcheck 2 creates a new block in its place.
+                    //then this object creates a new block in its place.
                     //We should get the position of it.
                     StartCoroutine(PlaceBlockG());
                     DeletionMutation1.createG = false;
-               
-       
+
+                    if (playOnce)
+                    {
+                       FindObjectOfType<AudioManager>().Play("Place");
+                       playOnce = false;
+                    }
+                    
+                    //We need to reset everything now in order to allow this mechanic to happen again.
+                    deleteScript1.enableSteal = false;
+                    deleteScript1.holdText.text = "NOT HOLDING";
+                        //Note to self: I did the long way around of calling DeletionMutation1. Might as well keep it for cocnsitency.
+                        //Then again the easy wasy was for static variables so...
+
             }
 
             if (DeletionMutation1.createC)
@@ -198,6 +219,17 @@ public class RaycastCheck2 : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockC());
                     DeletionMutation1.createC = false;
+                    
+                    if (playOnce)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Place");
+                        playOnce = false;
+                    }
+                    
+                    //We need to reset everything now in order to allow this mechanic to happen again.
+                    deleteScript1.enableSteal = false;
+                    deleteScript1.holdText.text = "NOT HOLDING";
+                    
              
                
             }
@@ -214,8 +246,17 @@ public class RaycastCheck2 : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockA());
                     DeletionMutation1.createA = false;
+                    
+                    if (playOnce)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Place");
+                        playOnce = false;
+                    }
        
                
+                    //We need to reset everything now in order to allow this mechanic to happen again.
+                    deleteScript1.enableSteal = false;
+                    deleteScript1.holdText.text = "NOT HOLDING";
      
             }
             
@@ -232,6 +273,16 @@ public class RaycastCheck2 : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     StartCoroutine(PlaceBlockT());
                     DeletionMutation1.createT = false;
+                    
+                    if (playOnce)
+                    {
+                        FindObjectOfType<AudioManager>().Play("Place");
+                        playOnce = false;
+                    }
+                    
+                    //We need to reset everything now in order to allow this mechanic to happen again.
+                    deleteScript1.enableSteal = false;
+                    deleteScript1.holdText.text = "NOT HOLDING";
             
                
             }
@@ -243,13 +294,19 @@ public class RaycastCheck2 : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             Instantiate(prefabG, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            DeletionMutation1.createG = false;
+            gotG = false;
             Debug.Log("Place the Block In");
+            
+      
         }
         
         IEnumerator PlaceBlockC()
         {
             yield return new WaitForSeconds(0.1f);
             Instantiate(prefabC, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            DeletionMutation1.createC = false;
+            gotC = false;
             Debug.Log("Place the Block In");
             
         }
@@ -258,6 +315,8 @@ public class RaycastCheck2 : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             Instantiate(prefabA, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            DeletionMutation1.createA = false;
+            gotA = false;    
             Debug.Log("Place the Block In");
         }
         
@@ -265,6 +324,8 @@ public class RaycastCheck2 : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             Instantiate(prefabT, new Vector3(47, thisBlockPos.y, 0), transform.rotation);
+            DeletionMutation1.createT = false;
+            gotT = false;
             Debug.Log("Place the Block In");
         }
     }

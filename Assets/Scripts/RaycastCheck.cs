@@ -35,6 +35,9 @@ public class RaycastCheck : MonoBehaviour
     
     //Variable to check if the prefab has been deleted
     public static bool isDestroyed2;
+    
+    //Reference to Music
+    public bool playOnce;
 
     void Start()
     {
@@ -45,6 +48,8 @@ public class RaycastCheck : MonoBehaviour
 
 
         isDestroyed2 = false;
+
+        playOnce = true;
 
     }
 
@@ -66,30 +71,30 @@ public class RaycastCheck : MonoBehaviour
         if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform != null)
         {
             //Then we check what each raycast is hitting
-        if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform.tag == "G")
-        {
-            //Reference to where the current opposing block is.
-            //This helps when replacing the block later
-            opposingBlockPos2 = hit.transform.position;
-            
-            //The tags help us tell which is which.
-        
-
-            //Now we gotta check if we can steal DNA. This is handled in DeletionMutation1
-            if (DeletionMutation2.stealDNA2 && isDestroyed2 == false)
+            if (Physics.Raycast(checkRay, out hit, myMaxDistance) && hit.transform.tag == "G")
             {
-                //Another check, but we got to make sure the player whose being stolen from made an input first before we still. This is just to prevent 
-                //the opposing block from being deleted before the player has a chance to at least score a point.
-                //For now just makes sure this stays.
-                if (dnaChain.inputMade2)
+                //Reference to where the current opposing block is.
+                //This helps when replacing the block later
+                opposingBlockPos2 = hit.transform.position;
+                
+                //The tags help us tell which is which.
+            
+    
+                //Now we gotta check if we can steal DNA. This is handled in DeletionMutation1
+                if (DeletionMutation2.stealDNA2 && isDestroyed2 == false)
                 {
-                    Debug.Log("Steal the G 2");
-                    Destroy(hit.transform.gameObject);
-                    DeletionMutation2.stealDNA2 = false;
-                    gotG2 = true;
+                    //Another check, but we got to make sure the player whose being stolen from made an input first before we still. This is just to prevent 
+                    //the opposing block from being deleted before the player has a chance to at least score a point.
+                    //For now just makes sure this stays.
+                    if (dnaChain.inputMade2)
+                    {
+                        Debug.Log("Steal the G 2");
+                        Destroy(hit.transform.gameObject);
+                        DeletionMutation2.stealDNA2 = false;
+                        gotG2 = true;
+                    }
+    
                 }
-
-            }
 
         }
         else if (hit.transform.tag == "C")
@@ -162,6 +167,9 @@ public class RaycastCheck : MonoBehaviour
         ///Insertion 
         if ( Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
         {
+            
+           
+            
             if (DeletionMutation2.createG2)
             {
                 isDestroyed2 = true;
@@ -174,9 +182,9 @@ public class RaycastCheck : MonoBehaviour
                     //then raycastcheck 2 creates a new block in its place.
                     //We should get the position of it.
                     StartCoroutine(PlaceBlockG());
+                    FindObjectOfType<AudioManager>().Play("Place");
                     DeletionMutation2.createG2 = false;
-               
-       
+         
             }
 
             if (DeletionMutation2.createC2)
@@ -237,6 +245,9 @@ public class RaycastCheck : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             Instantiate(prefabG, new Vector3(0, thisBlockPos2.y, 0), transform.rotation);
             Debug.Log("Place the Block In");
+            
+            ///Now we need to reset things in order to allow the mechanic to be used again.
+            
         }
         
         IEnumerator PlaceBlockC()
