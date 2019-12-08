@@ -123,6 +123,7 @@ public class dnaChain : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f)
         {
             helicase.text = "HELICASE";
+            FindObjectOfType<AudioManager>().Play("Mechanic1");
             deleteThree = true;
             p2Progress.fillAmount = 0f;
             CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);

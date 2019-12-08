@@ -1915,8 +1915,6 @@ MonoBehaviour:
   playOnce: 0
   dnaSpanwer2: {fileID: 1574186664}
   deleteScript2: {fileID: 0}
-  deletion: {fileID: 194127489}
-  timer: 0
 --- !u!65 &630857906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4630,8 +4628,6 @@ MonoBehaviour:
   playOnce: 0
   dnaSpanwer1: {fileID: 1707587750}
   deleteScript1: {fileID: 0}
-  deletion: {fileID: 2076305727}
-  timer: 0
 --- !u!1 &1684727046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,24 +4918,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Wrong
     clip: {fileID: 8300000, guid: 7314a6faafb6645f2b723a6d9fa23208, type: 3}
-    volume: 0.916
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Mechanic1
-    clip: {fileID: 8300000, guid: 8b5d6428509ec432db95c3542f87a764, type: 3}
-    volume: 0.916
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Mechanic2
-    clip: {fileID: 8300000, guid: 36c061f7f75d24822be94d50f4511598, type: 3}
-    volume: 0.916
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Mechanic3
-    clip: {fileID: 8300000, guid: 926e99ec5d34342a7a98d1ce0556a61b, type: 3}
     volume: 0.916
     pitch: 1
     loop: 0

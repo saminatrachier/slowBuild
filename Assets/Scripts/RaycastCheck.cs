@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RaycastCheck : MonoBehaviour
 {
@@ -42,6 +43,9 @@ public class RaycastCheck : MonoBehaviour
     //Finally a reference to DeletionMutation1
     public GameObject dnaSpanwer2;
     public DeletionMutation2 deleteScript2;
+    
+    public TextMeshProUGUI deletion;
+    public float timer;
 
     void Start()
     {
@@ -62,6 +66,15 @@ public class RaycastCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (deletion.text == "INSERTION")
+        {
+            timer += Time.deltaTime;
+        }
+
+        if (timer >= 1f)
+        {
+            deletion.text = " ";
+        }
          //First, we create a raycast that this object will make to check what the current opposing block is.
         Ray checkRay = new Ray(transform.position, -transform.forward);
         //This raycast checks whats below
@@ -173,11 +186,15 @@ public class RaycastCheck : MonoBehaviour
         ///Insertion 
         if ( Input.GetKeyDown(KeyCode.P) || (Input.GetButtonDown("P2 Delete")))
         {
-            
-           
-            
+
             if (DeletionMutation2.createG2)
             {
+                FindObjectOfType<AudioManager>().Play("Mechanic3");
+            
+                if (timer <= 1f)
+                {
+                    deletion.text = "INSERTION";
+                }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
@@ -198,6 +215,12 @@ public class RaycastCheck : MonoBehaviour
 
             if (DeletionMutation2.createC2)
             {
+                FindObjectOfType<AudioManager>().Play("Mechanic3");
+            
+                if (timer <= 1f)
+                {
+                    deletion.text = "INSERTION";
+                }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
@@ -216,6 +239,12 @@ public class RaycastCheck : MonoBehaviour
 
             if (DeletionMutation2.createA2)
             {
+                FindObjectOfType<AudioManager>().Play("Mechanic3");
+            
+                if (timer <= 1f)
+                {
+                    deletion.text = "INSERTION";
+                }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
@@ -235,7 +264,12 @@ public class RaycastCheck : MonoBehaviour
             
             if (DeletionMutation2.createT2)
             {
+                FindObjectOfType<AudioManager>().Play("Mechanic3");
             
+                if (timer <= 1f)
+                {
+                    deletion.text = "INSERTION";
+                }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
                 if (hit.transform != null)
