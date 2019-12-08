@@ -32,11 +32,13 @@
           <e p="dnaChain2.cs" t="Include" />
           <e p="dnaSpawn.cs" t="Include" />
           <e p="dnaSpawn2.cs" t="Include" />
-          <e p="Instructions.cs" t="Include" />
-          <e p="Instructions1.cs" t="Include" />
-          <e p="Instructions2.cs" t="Include" />
-          <e p="Instructions3.cs" t="Include" />
-          <e p="Instructions4.cs" t="Include" />
+          <e p="InstructionsStuff" t="Include">
+            <e p="Instructions.cs" t="Include" />
+            <e p="Instructions1.cs" t="Include" />
+            <e p="Instructions2.cs" t="Include" />
+            <e p="Instructions3.cs" t="Include" />
+            <e p="Instructions4.cs" t="Include" />
+          </e>
           <e p="Mutation1.cs" t="Include" />
           <e p="Mutation2.cs" t="Include" />
           <e p="player1A.cs" t="Include" />
@@ -53,7 +55,14 @@
           <e p="RaycastCheck2.cs" t="Include" />
           <e p="ScoreText1.cs" t="Include" />
           <e p="ScoreText2.cs" t="Include" />
-          <e p="Timer.cs" t="Include" />
+          <e p="TutorialScripts" t="Include">
+            <e p="dnaChain1.cs" t="Include" />
+            <e p="dnaChain3.cs" t="Include" />
+            <e p="dnaSpawn1.cs" t="Include" />
+            <e p="dnaSpawn3.cs" t="Include" />
+            <e p="RaycastCheck1.cs" t="Include" />
+            <e p="RaycastCheck3.cs" t="Include" />
+          </e>
         </e>
         <e p="Sound.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">

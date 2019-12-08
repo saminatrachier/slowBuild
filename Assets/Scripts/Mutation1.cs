@@ -46,7 +46,7 @@ public class Mutation1 : MonoBehaviour
     {
         
         Debug.Log("Player 1 Mutation is at: " + Mutation);
-        if (Mutation == 1)
+        if (Mutation == 1 && dnaChain1.winner != true)
         {
             cam1.backgroundColor =color1;
             if (shakeOnlyOnce == false)
@@ -58,7 +58,7 @@ public class Mutation1 : MonoBehaviour
              
         }
 
-        if (Mutation == 2)
+        if (Mutation == 2 && dnaChain1.winner != true)
         {
             
             cam1.backgroundColor = color2;
@@ -71,7 +71,7 @@ public class Mutation1 : MonoBehaviour
 
         }
 
-        if (Mutation == 3)
+        if (Mutation == 3 && dnaChain1.winner != true)
         {
             cam1.backgroundColor = color3;
             gameOverText.SetActive(true);
