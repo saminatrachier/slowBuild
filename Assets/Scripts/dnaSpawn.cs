@@ -26,7 +26,7 @@ public class dnaSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int y = 0; y < 50; y++)
+        for (int y = 0; y < 51; y++)
         { 
             //position of the prefabs
             Vector3 spawnPosition = new Vector3(0,y*2, 0);
