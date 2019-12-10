@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d34d801f-84e5-4222-8cba-f06c093b53f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/buttonScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/buttonScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaChain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaChain2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/dnaSpawn2.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d34d801f-84e5-4222-8cba-f06c093b53f5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +22,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2974" />
+          <entry key="cs" value="2989" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2974" />
+          <entry key="C#" value="2989" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -71,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
-              <caret line="174" column="41" lean-forward="true" selection-start-line="174" selection-start-column="41" selection-end-line="174" selection-end-column="41" />
+              <caret line="174" column="41" selection-start-line="174" selection-start-column="41" selection-end-line="174" selection-end-column="41" />
               <folding>
                 <marker date="1575867836765" expanded="false" signature="6:169" ph="..." />
                 <marker date="1575867836765" expanded="true" signature="171:335" ph="/* PURPOSE: player1 (WASD) player controller and progress bar ... */" />
@@ -104,15 +95,16 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/buttonScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <caret line="31" column="79" lean-forward="true" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
               <folding>
-                <marker date="1575868193205" expanded="false" signature="6:135" ph="..." />
-                <marker date="1575868193205" expanded="true" signature="178:717" ph="{...}" />
-                <marker date="1575868193205" expanded="true" signature="250:271" ph="{...}" />
-                <marker date="1575868193205" expanded="true" signature="329:350" ph="{...}" />
-                <marker date="1575868193205" expanded="true" signature="388:474" ph="{...}" />
-                <marker date="1575868193205" expanded="true" signature="506:600" ph="{...}" />
-                <marker date="1575868193205" expanded="true" signature="628:715" ph="{...}" />
+                <marker date="1575868253054" expanded="false" signature="6:135" ph="..." />
+                <marker date="1575868253054" expanded="true" signature="178:831" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="250:271" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="329:350" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="388:474" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="506:600" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="628:718" ph="{...}" />
+                <marker date="1575868253054" expanded="true" signature="742:829" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -502,12 +494,12 @@
       <workItem from="1575338445667" duration="7399000" />
       <workItem from="1575402867446" duration="1519000" />
       <workItem from="1575407156293" duration="27806000" />
-      <workItem from="1575867757966" duration="410000" />
+      <workItem from="1575867757966" duration="648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27924000" />
+    <option name="totallyTimeSpent" value="28162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -965,7 +957,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/dnaChain.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="174" column="41" lean-forward="true" selection-start-line="174" selection-start-column="41" selection-end-line="174" selection-end-column="41" />
+          <caret line="174" column="41" selection-start-line="174" selection-start-column="41" selection-end-line="174" selection-end-column="41" />
           <folding>
             <marker date="1575867836765" expanded="false" signature="6:169" ph="..." />
             <marker date="1575867836765" expanded="true" signature="171:335" ph="/* PURPOSE: player1 (WASD) player controller and progress bar ... */" />
@@ -996,15 +988,16 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/buttonScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <caret line="31" column="79" lean-forward="true" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
           <folding>
-            <marker date="1575868193205" expanded="false" signature="6:135" ph="..." />
-            <marker date="1575868193205" expanded="true" signature="178:717" ph="{...}" />
-            <marker date="1575868193205" expanded="true" signature="250:271" ph="{...}" />
-            <marker date="1575868193205" expanded="true" signature="329:350" ph="{...}" />
-            <marker date="1575868193205" expanded="true" signature="388:474" ph="{...}" />
-            <marker date="1575868193205" expanded="true" signature="506:600" ph="{...}" />
-            <marker date="1575868193205" expanded="true" signature="628:715" ph="{...}" />
+            <marker date="1575868253054" expanded="false" signature="6:135" ph="..." />
+            <marker date="1575868253054" expanded="true" signature="178:831" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="250:271" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="329:350" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="388:474" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="506:600" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="628:718" ph="{...}" />
+            <marker date="1575868253054" expanded="true" signature="742:829" ph="{...}" />
           </folding>
         </state>
       </provider>
