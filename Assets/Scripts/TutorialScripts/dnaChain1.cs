@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using EZCameraShake;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 //PURPOSE: player1 (WASD) player controller and progress bar
 //usage: put this on player1enemyspawnmanager to spawn the prefabs randomly 
 //basically assign prefabs
 
-public class dnaChain : MonoBehaviour
+public class dnaChain1 : MonoBehaviour
 {
     //prefabs for the player input
     public GameObject prefabA;
@@ -29,7 +30,10 @@ public class dnaChain : MonoBehaviour
 
     public static bool winner;
     
-    public TextMeshProUGUI helicase;
+    public Color color1 = new Color(255, 185, 185, 255); //light red
+    public Camera cam1;
+    
+  //  public TextMeshProUGUI helicase;
     
     //time left for player objects to appear
     public float timeLeft = 0f;
@@ -44,6 +48,12 @@ public class dnaChain : MonoBehaviour
     public float time;
 
     public int pressCount;
+
+    public GameObject tutorialText;
+    public GameObject tutorialText2;
+    
+    public TextMeshProUGUI score;
+    public GameObject start;
     
     
     //Reference to the parent
@@ -51,7 +61,7 @@ public class dnaChain : MonoBehaviour
    
     void Start()
     {
-        helicase.text = null;
+      //  helicase.text = null;
         inputMade2 = false;
         deleteCounter = 0;
         deleteCounter2 = 0;
@@ -59,15 +69,22 @@ public class dnaChain : MonoBehaviour
         time = 0.2f;
         pressCount = 0;
         winner = false;
+        tutorialText.SetActive(false);
+        start.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    //player 1 inputs/controller
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left")) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
+
+        if (cameraCinematic.startCinematic == false && pressCount == 0)
         {
+            tutorialText.SetActive(true);
+        }
+    //player 1 inputs/controller
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("P1 Left")) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false && winner != true)
+        {
+            tutorialText.SetActive(false);
             Instantiate(prefabA, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 0.05f;
@@ -79,8 +96,9 @@ public class dnaChain : MonoBehaviour
             //player1ShakeChange
             CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 1f, .1f, 1);
         }
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetButtonDown("P1 Up"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false && winner != true)
         {
+            tutorialText.SetActive(false);
             Instantiate(prefabG, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 0.05f;
@@ -91,8 +109,9 @@ public class dnaChain : MonoBehaviour
             CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
 
         }
-        if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetButtonDown("P1 Down"))&& Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false && winner != true)
         {
+            tutorialText.SetActive(false);
             Instantiate(prefabC, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 0.05f;
@@ -105,8 +124,9 @@ public class dnaChain : MonoBehaviour
 
 
         }
-        if ((Input.GetKeyDown(KeyCode.D)|| Input.GetButtonDown("P1 Right") ) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false)
+        if ((Input.GetKeyDown(KeyCode.D)|| Input.GetButtonDown("P1 Right") ) && Mutation1.Mutation < 3 && cameraCinematic.startCinematic == false && winner != true)
         {
+            tutorialText.SetActive(false);
             Instantiate(prefabT, transform.position, transform.rotation);
             StartCoroutine(MoveUp2());
             p1Progress.fillAmount += 0.05f;
@@ -118,43 +138,10 @@ public class dnaChain : MonoBehaviour
             CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
         }
         
-        
-        //Helicase Mechanic for Player 2 end
-        if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f)
-        {
-            helicase.text = "HELICASE";
-            FindObjectOfType<AudioManager>().Play("Mechanic1");
-            deleteThree = true;
-            p2Progress.fillAmount = 0f;
-            CameraShaker.GetInstance("Main Camera").ShakeOnce(2f, 2f, .1f, 1);
-        }
-        
-        if (deleteThree == true && deleteCounter < 3)
-        {
-           
-            float myMaxDistance2 = 2000f;
-            RaycastHit downHit;
-            Ray checkRay2 = new Ray(transform.position, -transform.up);
-            time -= Time.deltaTime;
-            if (time <= 0)
-            {
-                StartCoroutine(MoveDown2());
-                cameraParent.GetComponent<Transform>().Translate(new Vector3(0, -2f));
-                Physics.Raycast(checkRay2, out downHit, myMaxDistance2);
-                Destroy(downHit.transform.gameObject); 
-                ScoreText1.Score -= 1;
-                time = 0.2f;
-               // deleteThree = false;
-                deleteCounter++;
-            }
-        }
-        else
-        {
-            helicase.text = null;
-        }
 
         if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
         {
+            Debug.Log("oopyy");
             progressBar.fillAmount = 0f;
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
@@ -171,22 +158,26 @@ public class dnaChain : MonoBehaviour
             }
         }
 
+        score.text = (ScoreText1.Score).ToString();
 
-        if (progressBar.fillAmount >= 1f)
+        if (score.text == "5")
         {
             winner = true;
-            SceneManager.LoadScene (2);
+            tutorialText.SetActive(true);
+            tutorialText.GetComponent<TextMeshProUGUI>().text = "Ready!";
+            cam1.backgroundColor =color1;
+            //SceneManager.LoadScene (2);
         }
-        
-        if (p1Progress.fillAmount < 1.0f)
+
+        if (winner == true && dnaChain3.winner2 == true)
         {
-            p1Progress.color = new Color(1, 1, 1, 1);
-        }
-        
-        if (p1Progress.fillAmount >= 1.0f)
-        {
-            p1Progress.color = new Color(0, 1, 1, 1);
-            p1Progress.fillAmount = 1.0f;
+            start.SetActive(true);
+            tutorialText.SetActive(false);
+            tutorialText2.SetActive(false);
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
         
         IEnumerator ResetBool2()

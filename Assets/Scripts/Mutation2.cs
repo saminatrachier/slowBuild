@@ -47,7 +47,7 @@ public class Mutation2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mutation == 1)
+        if (Mutation == 1 && dnaChain3.winner2 != true)
         {
             cam2.backgroundColor =color1;
             
@@ -59,7 +59,7 @@ public class Mutation2 : MonoBehaviour
             }
         }
 
-        if (Mutation == 2)
+        if (Mutation == 2 && dnaChain3.winner2 != true)
         {
             cam2.backgroundColor = color2;
             if (shakeOnlyOnce == true)
@@ -70,7 +70,7 @@ public class Mutation2 : MonoBehaviour
             }
         }
 
-        if (Mutation == 3)
+        if (Mutation == 3 && dnaChain3.winner2 != true)
         {
             cam2.backgroundColor = color3;
             gameOverText.SetActive(true);

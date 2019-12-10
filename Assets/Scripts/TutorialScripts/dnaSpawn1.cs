@@ -6,8 +6,8 @@ using UnityEngine;
 
 
 //Usage: Spawn the prefabs randomly in a straight line for the DNA Chain
-//
-public class dnaSpawn2 : MonoBehaviour
+//Purpose: creates a DNA list for player 1 to match their inputs tp
+public class dnaSpawn1 : MonoBehaviour
 {
     //public dnaChain myDNAPrefab;
     public GameObject PrefabA;
@@ -26,16 +26,16 @@ public class dnaSpawn2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int y = 0; y < 51; y++)
+        for (int y = 0; y < 10; y++)
         { 
             //position of the prefabs
-            Vector3 spawnPosition = new Vector3(47,y*2, 0);
+            Vector3 spawnPosition = new Vector3(0,y*2, 0);
 
 
             int currentDNACount = 0;
-            //while (currentDNACount < maxDNACount)
-            //{
-                // dnaChain newDNAClone = (dnaChain) Instantiate(myDNAPrefab, transform.position, transform.rotation);
+       
+            
+            //creates a list of the DNA components prefabs
                 myDNAList.Add(PrefabA);
                 myDNAList.Add(PrefabC);
                 myDNAList.Add(PrefabT);
@@ -51,8 +51,7 @@ public class dnaSpawn2 : MonoBehaviour
         void Update()
         {
         }
-        //player input:
-        //if player presses the correct key then another key should spawn
+       
 
     }
 }

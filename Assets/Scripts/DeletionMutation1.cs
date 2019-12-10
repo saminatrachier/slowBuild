@@ -93,6 +93,7 @@ public class DeletionMutation1 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) || (Input.GetButtonDown("P1 Delete")))
             {
+                FindObjectOfType<AudioManager>().Play("Mechanic2");
                 dnaChainScript.p1Progress.fillAmount = 0.0f;
                 if (timer <= 1f)
                 {

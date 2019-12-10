@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class RaycastCheck : MonoBehaviour
+public class RaycastCheck1 : MonoBehaviour
 {
     [Header("Got Variables")]
     public static bool gotG2;
@@ -44,7 +44,7 @@ public class RaycastCheck : MonoBehaviour
     public GameObject dnaSpanwer2;
     public DeletionMutation2 deleteScript2;
     
-    public TextMeshProUGUI deletion;
+  //  public TextMeshProUGUI deletion;
     public float timer;
 
     void Start()
@@ -66,15 +66,15 @@ public class RaycastCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deletion.text == "INSERTION")
-        {
-            timer += Time.deltaTime;
-        }
+      //  if (deletion.text == "INSERTION")
+        //{
+         //   timer += Time.deltaTime;
+       // }
 
-        if (timer >= 1f)
-        {
-            deletion.text = " ";
-        }
+        //if (timer >= 1f)
+       // {
+       //     deletion.text = " ";
+       // }
          //First, we create a raycast that this object will make to check what the current opposing block is.
         Ray checkRay = new Ray(transform.position, -transform.forward);
         //This raycast checks whats below
@@ -193,7 +193,7 @@ public class RaycastCheck : MonoBehaviour
             
                 if (timer <= 1f)
                 {
-                    deletion.text = "INSERTION";
+             //       deletion.text = "INSERTION";
                 }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
@@ -219,7 +219,7 @@ public class RaycastCheck : MonoBehaviour
             
                 if (timer <= 1f)
                 {
-                    deletion.text = "INSERTION";
+             //       deletion.text = "INSERTION";
                 }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
@@ -243,7 +243,7 @@ public class RaycastCheck : MonoBehaviour
             
                 if (timer <= 1f)
                 {
-                    deletion.text = "INSERTION";
+//                    deletion.text = "INSERTION";
                 }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted
@@ -268,7 +268,7 @@ public class RaycastCheck : MonoBehaviour
             
                 if (timer <= 1f)
                 {
-                    deletion.text = "INSERTION";
+//                    deletion.text = "INSERTION";
                 }
                 isDestroyed2 = true;
                 //We need to get the opposing block to be deleted

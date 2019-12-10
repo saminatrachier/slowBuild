@@ -22,4 +22,14 @@ public class buttonScript : MonoBehaviour
     public void PlayGame() {
         SceneManager.LoadScene (1); //if the button is pressed, go to the game
     }
+    public void Instructions() {
+        SceneManager.LoadScene (3); //if the button is pressed, go to the instructions
+    }
+    public void Tutorial() {
+        SceneManager.LoadScene (4); //if the button is pressed, go to the tutorial
+    }
+    public void Menu() {
+        SceneManager.LoadScene (0); //if the button is pressed, go to the start
+    }
 }
+

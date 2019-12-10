@@ -7,7 +7,7 @@ using UnityEngine;
 
 //Usage: Spawn the prefabs randomly in a straight line for the DNA Chain
 //
-public class dnaSpawn2 : MonoBehaviour
+public class dnaSpawn3 : MonoBehaviour
 {
     //public dnaChain myDNAPrefab;
     public GameObject PrefabA;
@@ -26,7 +26,7 @@ public class dnaSpawn2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int y = 0; y < 51; y++)
+        for (int y = 0; y < 10; y++)
         { 
             //position of the prefabs
             Vector3 spawnPosition = new Vector3(47,y*2, 0);
