@@ -39,6 +39,7 @@
             <e p="Instructions3.cs" t="Include" />
             <e p="Instructions4.cs" t="Include" />
           </e>
+          <e p="LilBoyScript.cs" t="Include" />
           <e p="Mutation1.cs" t="Include" />
           <e p="Mutation2.cs" t="Include" />
           <e p="player1A.cs" t="Include" />
