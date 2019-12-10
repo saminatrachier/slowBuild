@@ -48,6 +48,9 @@ public class dnaChain : MonoBehaviour
     
     //Reference to the parent
     public GameObject cameraParent;
+    
+    //Variable to reset the progress bar
+    public bool resetPower;
    
     void Start()
     {
@@ -59,6 +62,8 @@ public class dnaChain : MonoBehaviour
         time = 0.2f;
         pressCount = 0;
         winner = false;
+
+        resetPower = false;
     }
 
     // Update is called once per frame
@@ -120,7 +125,7 @@ public class dnaChain : MonoBehaviour
         
         
         //Helicase Mechanic for Player 2 end
-        if (Input.GetKeyDown(KeyCode.Y) && p2Progress.fillAmount == 1f)
+        if (Input.GetKeyDown(KeyCode.Y) || Input.GetButtonDown("P2 Heliocase")&& p2Progress.fillAmount == 1f)
         {
             helicase.text = "HELICASE";
             FindObjectOfType<AudioManager>().Play("Mechanic1");
@@ -155,7 +160,9 @@ public class dnaChain : MonoBehaviour
 
         if (Mutation1.Mutation == 3 && deleteCounter2 < pressCount)
         {
+            resetPower = true;
             progressBar.fillAmount = 0f;
+            p1Progress.fillAmount = 0f;
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);
@@ -170,7 +177,10 @@ public class dnaChain : MonoBehaviour
                 deleteCounter2++;
             }
         }
+        
+        //Code that resets the progress bar when fatal mutation occurs
 
+        
 
         if (progressBar.fillAmount >= 1f)
         {

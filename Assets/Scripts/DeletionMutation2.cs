@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.UNetWeaver;
 
 public class DeletionMutation2 : MonoBehaviour
 {
