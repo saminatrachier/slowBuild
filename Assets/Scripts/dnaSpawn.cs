@@ -17,7 +17,7 @@ public class dnaSpawn : MonoBehaviour
     public GameObject PrefabC;
 
     public GameObject PrefabG;
-
+    
     public int maxDNACount = 50; //how many DNA should we be able to make?
     List<GameObject> myDNAList = new List<GameObject>(); //list of all the DNA that spawns
 

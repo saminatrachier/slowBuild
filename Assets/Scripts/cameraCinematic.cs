@@ -18,7 +18,6 @@ public class cameraCinematic : MonoBehaviour
     void Start()
     {
         startCinematic = true;
-
         
     }
 
