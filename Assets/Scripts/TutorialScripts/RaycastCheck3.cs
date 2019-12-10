@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.WSA.Input;
 using TMPro;
 
 //USAGE: This script goes on the Raycast 2 Gameobject. This block will always check

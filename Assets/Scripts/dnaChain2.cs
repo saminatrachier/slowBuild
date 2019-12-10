@@ -124,7 +124,7 @@ public class dnaChain2 : MonoBehaviour
         }
         
         //Helicase Mechanic for Player 1's End
-        if (Input.GetKeyDown(KeyCode.R) && p1Progress.fillAmount >= 1f)
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("P1 Heliocase") && p1Progress.fillAmount >= 1f)
         {
             helicase.text = "HELICASE";
             FindObjectOfType<AudioManager>().Play("Mechanic1");
@@ -158,6 +158,7 @@ public class dnaChain2 : MonoBehaviour
         if (Mutation2.Mutation == 3 && deleteCounter2 < pressCount)
         {
             progressBar.fillAmount = 0f;
+            p2Progress.fillAmount = 0f;
             float myMaxDistance2 = 2000f;
             RaycastHit downHit;
             Ray checkRay2 = new Ray(transform.position, -transform.up);
@@ -183,6 +184,10 @@ public class dnaChain2 : MonoBehaviour
             p2Progress.color = new Color(0, 1, 1, 1);
             p2Progress.fillAmount = 1.0f;
         }
+        
+        //This code will check when Mutation has been reached, and will then reset/subtract the power up bar by a bit.
+        
+        
         
     }
 
