@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LilBoyScript : MonoBehaviour
+public class LilBoyScript1 : MonoBehaviour
 {
     public GameObject normal;
     public GameObject teeth;
@@ -19,7 +19,7 @@ public class LilBoyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mutation1.Mutation == 3)
+        if (Mutation2.Mutation == 3)
         {
             int random = Random.Range(1, 6);
             if (random == 1)

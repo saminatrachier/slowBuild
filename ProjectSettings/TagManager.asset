@@ -9,6 +9,11 @@ TagManager:
   - A
   - G
   - C
+  - arms
+  - horns
+  - tail
+  - teeth
+  - wings
   layers:
   - Default
   - TransparentFX
