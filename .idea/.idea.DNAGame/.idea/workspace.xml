@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d34d801f-84e5-4222-8cba-f06c093b53f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DNAGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LilBoyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LilBoyScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="d34d801f-84e5-4222-8cba-f06c093b53f5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.opened" value="2" />
@@ -87,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/LilBoyScript1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-279">
-              <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="141">
+              <caret line="47" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
               <folding>
                 <marker date="1576020310378" expanded="false" signature="6:78" ph="..." />
                 <marker date="1576020310378" expanded="true" signature="122:2080" ph="{...}" />
@@ -103,26 +96,6 @@
                 <marker date="1576020310378" expanded="true" signature="1196:1462" ph="{...}" />
                 <marker date="1576020310378" expanded="true" signature="1496:1762" ph="{...}" />
                 <marker date="1576020310378" expanded="true" signature="1796:2062" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/AudioManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <marker date="1575762757975" expanded="false" signature="6:117" ph="..." />
-                <marker date="1575762757975" expanded="true" signature="160:1408" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="260:826" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="358:407" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="420:493" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="586:820" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="861:1313" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="1138:1274" ph="{...}" />
-                <marker date="1575762757975" expanded="true" signature="1371:1406" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -361,12 +334,12 @@
       <workItem from="1575402867446" duration="1519000" />
       <workItem from="1575407156293" duration="27806000" />
       <workItem from="1575867757966" duration="648000" />
-      <workItem from="1576008601905" duration="3871000" />
+      <workItem from="1576008601905" duration="4267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32033000" />
+    <option name="totallyTimeSpent" value="32429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -732,34 +705,34 @@
         <state relative-caret-position="202">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
-            <marker date="1557345137000" expanded="false" signature="6:52" ph="..." />
-            <marker date="1557345137000" expanded="true" signature="77:8192" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="181:8190" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="196:349" ph="/// The single instance of the CameraShaker in the current scene. Do not use if you have multiple instances. ... " />
-            <marker date="1557345137000" expanded="true" signature="507:625" ph="/// The default position influcence of all shakes created by this shaker. ... " />
-            <marker date="1557345137000" expanded="true" signature="713:831" ph="/// The default rotation influcence of all shakes created by this shaker. ... " />
-            <marker date="1557345137000" expanded="true" signature="907:1029" ph="/// Offset that will be applied to the camera's default (0,0,0) rest position ... " />
-            <marker date="1557345137000" expanded="true" signature="1104:1226" ph="/// Offset that will be applied to the camera's default (0,0,0) rest rotation ... " />
-            <marker date="1557345137000" expanded="true" signature="1448:1550" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="1573:2582" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="1729:2424" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="1977:2092" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="2162:2410" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="2592:2808" ph="/// Gets the CameraShaker with the given name, if it exists. ... " />
-            <marker date="1557345137000" expanded="true" signature="2868:3092" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="3102:3351" ph="/// Starts a shake using the given preset. ... " />
-            <marker date="1557345137000" expanded="true" signature="3419:3510" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="3520:4118" ph="/// Shake the camera once, fading in and out  over a specified durations. ... " />
-            <marker date="1557345137000" expanded="true" signature="4234:4556" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="4566:5339" ph="/// Shake the camera once, fading in and out over a specified durations. ... " />
-            <marker date="1557345137000" expanded="true" signature="5499:5807" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="5817:6281" ph="/// Start shaking the camera. ... " />
-            <marker date="1557345137000" expanded="true" signature="6379:6718" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="6728:7368" ph="/// Start shaking the camera. ... " />
-            <marker date="1557345137000" expanded="true" signature="7510:7835" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="7845:7952" ph="/// Gets a copy of the list of current camera shake instances. ... " />
-            <marker date="1557345137000" expanded="true" signature="8008:8088" ph="{...}" />
-            <marker date="1557345137000" expanded="true" signature="8114:8184" ph="{...}" />
+            <marker date="1576020959749" expanded="false" signature="6:52" ph="..." />
+            <marker date="1576020959749" expanded="true" signature="98:8213" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="202:8211" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="217:370" ph="/// The single instance of the CameraShaker in the current scene. Do not use if you have multiple instances. ... " />
+            <marker date="1576020959749" expanded="true" signature="528:646" ph="/// The default position influcence of all shakes created by this shaker. ... " />
+            <marker date="1576020959749" expanded="true" signature="734:852" ph="/// The default rotation influcence of all shakes created by this shaker. ... " />
+            <marker date="1576020959749" expanded="true" signature="928:1050" ph="/// Offset that will be applied to the camera's default (0,0,0) rest position ... " />
+            <marker date="1576020959749" expanded="true" signature="1125:1247" ph="/// Offset that will be applied to the camera's default (0,0,0) rest rotation ... " />
+            <marker date="1576020959749" expanded="true" signature="1469:1571" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="1594:2603" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="1750:2445" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="1998:2113" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="2183:2431" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="2613:2829" ph="/// Gets the CameraShaker with the given name, if it exists. ... " />
+            <marker date="1576020959749" expanded="true" signature="2889:3113" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="3123:3372" ph="/// Starts a shake using the given preset. ... " />
+            <marker date="1576020959749" expanded="true" signature="3440:3531" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="3541:4139" ph="/// Shake the camera once, fading in and out  over a specified durations. ... " />
+            <marker date="1576020959749" expanded="true" signature="4255:4577" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="4587:5360" ph="/// Shake the camera once, fading in and out over a specified durations. ... " />
+            <marker date="1576020959749" expanded="true" signature="5520:5828" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="5838:6302" ph="/// Start shaking the camera. ... " />
+            <marker date="1576020959749" expanded="true" signature="6400:6739" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="6749:7389" ph="/// Start shaking the camera. ... " />
+            <marker date="1576020959749" expanded="true" signature="7531:7856" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="7866:7973" ph="/// Gets a copy of the list of current camera shake instances. ... " />
+            <marker date="1576020959749" expanded="true" signature="8029:8109" ph="{...}" />
+            <marker date="1576020959749" expanded="true" signature="8135:8205" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -879,25 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LilBoyScript1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <marker date="1576020310378" expanded="false" signature="6:78" ph="..." />
-            <marker date="1576020310378" expanded="true" signature="122:2080" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="367:411" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="469:2078" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="512:2072" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="596:862" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="896:1162" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="1196:1462" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="1496:1762" ph="{...}" />
-            <marker date="1576020310378" expanded="true" signature="1796:2062" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/AudioManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -912,6 +866,25 @@
             <marker date="1575762757975" expanded="true" signature="861:1313" ph="{...}" />
             <marker date="1575762757975" expanded="true" signature="1138:1274" ph="{...}" />
             <marker date="1575762757975" expanded="true" signature="1371:1406" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LilBoyScript1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="47" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <marker date="1576020310378" expanded="false" signature="6:78" ph="..." />
+            <marker date="1576020310378" expanded="true" signature="122:2080" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="367:411" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="469:2078" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="512:2072" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="596:862" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="896:1162" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="1196:1462" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="1496:1762" ph="{...}" />
+            <marker date="1576020310378" expanded="true" signature="1796:2062" ph="{...}" />
           </folding>
         </state>
       </provider>
