@@ -10,10 +10,13 @@ public class LilBoyScript1 : MonoBehaviour
     public GameObject horns;
     public GameObject tail;
     public GameObject arms;
+
+    public bool chosen = false;
     // Start is called before the first frame update
     void Start()
     {
         normal.SetActive(true);
+        chosen = false;
     }
 
     // Update is called once per frame
@@ -22,7 +25,7 @@ public class LilBoyScript1 : MonoBehaviour
         if (Mutation2.Mutation == 3)
         {
             int random = Random.Range(1, 6);
-            if (random == 1)
+            if (random == 1 && chosen == false)
             {
                 normal.SetActive(false);
                 wings.SetActive(false);
@@ -30,8 +33,9 @@ public class LilBoyScript1 : MonoBehaviour
                 tail.SetActive(false);
                 arms.SetActive(false);
                 teeth.SetActive(true);
+                chosen = true;
             }
-            else if (random == 2)
+            else if (random == 2 && chosen == false)
             {
                 normal.SetActive(false);
                 wings.SetActive(true);
@@ -39,8 +43,9 @@ public class LilBoyScript1 : MonoBehaviour
                 tail.SetActive(false);
                 arms.SetActive(false);
                 teeth.SetActive(false);
+                chosen = true;
             }
-            else if (random == 3)
+            else if (random == 3 && chosen == false)
             {
                 normal.SetActive(false);
                 wings.SetActive(false);
@@ -48,8 +53,9 @@ public class LilBoyScript1 : MonoBehaviour
                 tail.SetActive(false);
                 arms.SetActive(false);
                 teeth.SetActive(false);
+                chosen = true;
             }
-            else if (random == 4)
+            else if (random == 4 && chosen == false)
             {
                 normal.SetActive(false);
                 wings.SetActive(false);
@@ -57,8 +63,9 @@ public class LilBoyScript1 : MonoBehaviour
                 tail.SetActive(true);
                 arms.SetActive(false);
                 teeth.SetActive(false);
+                chosen = true;
             }
-            else if (random == 5)
+            else if (random == 5 && chosen == false)
             {
                 normal.SetActive(false);
                 wings.SetActive(false);
@@ -66,7 +73,12 @@ public class LilBoyScript1 : MonoBehaviour
                 tail.SetActive(false);
                 arms.SetActive(true);
                 teeth.SetActive(false);
+                chosen = true;
             }
+        }
+        else
+        {
+            chosen = false;
         }
     }
 }
